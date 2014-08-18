@@ -29,7 +29,7 @@ serverPacketHandlerSpec = @SidedPacketHandler(channels = {"ReinforcedArmors"}, p
 public class ReinforcedArmors {
 
 	@Instance("ReinforcedArmors") //The instance, this is very important later on
-	public static ReinforcedArmors instance = new ReinforcedArmors();
+	public static ReinforcedArmors instance ;
 
 	@SidedProxy(clientSide = "zalthrion.reinforcedarmors.client.ReinforcedArmorsClientProxy", serverSide = "zalthrion.reinforcedarmors.common.ReinforcedArmorsCommonProxy") //Tells Forge the location of your proxies
 	public static ReinforcedArmorsCommonProxy proxy;
@@ -52,7 +52,7 @@ public class ReinforcedArmors {
 	proxy.registerBlocks(); //Calls the registerBlocks method -- This wasn't here before, so don't skip over this!
 		
 	//MULTIPLAYER ABILITY
-	NetworkRegistry.instance().registerGuiHandler(this, proxy); //Registers the class that deals with GUI data
+//	NetworkRegistry.instance().registerGuiHandler(this, proxy); //Registers the class that deals with GUI data
 
 	}	
 }
