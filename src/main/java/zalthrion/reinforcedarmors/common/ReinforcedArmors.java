@@ -2,6 +2,8 @@ package zalthrion.reinforcedarmors.common;
 
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -52,6 +54,22 @@ public class ReinforcedArmors {
 	@EventHandler
 	public void InitReinforcedArmors(FMLInitializationEvent event){ //Your main initialization method
 
+	//Recipes and Other Stuff
+
+
+	ItemStack ObsidianStack = new ItemStack(Block.obsidian);
+
+	ItemStack Crying_ObsidianStack = new ItemStack(Crying_Obsidian);
+
+	ItemStack DirtStack = new ItemStack(Block.dirt);
+
+	ItemStack Lapis_BlockStack = new ItemStack(Block.blockLapis);
+
+	ItemStack Ender_PearlStack = new ItemStack(Item.enderPearl);
+
+
+		GameRegistry.addRecipe(Crying_ObsidianStack, "lyl", "yxy", "lyl", 'x', ObsidianStack, 'y', Lapis_BlockStack, 'l', Ender_PearlStack);
+		
 	//BLOCKS (METHOD)
 	proxy.registerBlocks(); //Calls the registerBlocks method -- This wasn't here before, so don't skip over this!
 		
