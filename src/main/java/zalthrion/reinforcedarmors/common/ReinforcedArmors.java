@@ -18,8 +18,10 @@ import cpw.mods.fml.common.network.NetworkMod.SidedPacketHandler;
 import cpw.mods.fml.common.SidedProxy;
 import zalthrion.reinforcedarmors.common.ReinforcedArmorsCommonProxy;
 import zalthrion.reinforcedarmors.common.blocks.BlockCrying_Obsidian;
+import zalthrion.reinforcedarmors.common.blocks.Purified_Obsidian;
 import zalthrion.reinforcedarmors.common.handlers.ReinforcedArmorsServerPacketHandler;
 import zalthrion.reinforcedarmors.common.handlers.ReinforcedArmorsClientPacketHandler;
+import zalthrion.reinforcedarmors.common.items.Purified_Obsidian_Ingot;
 
 
 @NetworkMod(clientSideRequired=true,serverSideRequired=true, //Whether client side and server side are needed
@@ -38,16 +40,37 @@ public class ReinforcedArmors {
 	@SidedProxy(clientSide = "zalthrion.reinforcedarmors.client.ReinforcedArmorsClientProxy", serverSide = "zalthrion.reinforcedarmors.common.ReinforcedArmorsCommonProxy") //Tells Forge the location of your proxies
 	public static ReinforcedArmorsCommonProxy proxy;
 
+	//ITEMS
+	public static Item Purified_Obsidian_Ingot;
+	
 	//BLOCKS
 	public static Block Crying_Obsidian;
+	
+	public static Block Purified_Obsidian;
 	
 	@EventHandler
 	public void PreInit(FMLPreInitializationEvent e){
 
+	//ITEMS
+		
+	//Purified Obsidian Ingot
+		
+	Purified_Obsidian_Ingot = new Purified_Obsidian_Ingot(5113).setUnlocalizedName("Purified Obsidian Ingot").setCreativeTab(CreativeTabs.tabMaterials); //5413 is the ID
+	GameRegistry.registerItem(Purified_Obsidian_Ingot, "Purified Obsidian Ingot");
+	
 	//BLOCKS
-	Crying_Obsidian = new BlockCrying_Obsidian(3000).setHardness(50.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("Crying Obsidian").setCreativeTab(CreativeTabs.tabBlock).setResistance(2000.0F); //3000 is its ID
+	
+	//Crying Obsidian
+	
+	Crying_Obsidian = new BlockCrying_Obsidian(3134).setHardness(50.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("Crying Obsidian").setCreativeTab(CreativeTabs.tabBlock).setResistance(2000.0F); //3134 is its ID
 	GameRegistry.registerBlock(Crying_Obsidian, "Crying Obsidian");
 	MinecraftForge.setBlockHarvestLevel(Crying_Obsidian, "pickaxe", 3);
+	
+	//Purified Obsidian
+	
+	Purified_Obsidian = new Purified_Obsidian(3135).setHardness(50.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("Purified Obsidian").setCreativeTab(CreativeTabs.tabBlock).setResistance(2000.0F); //3134 is its ID
+	GameRegistry.registerBlock(Purified_Obsidian, "Purified Obsidian");
+	MinecraftForge.setBlockHarvestLevel(Purified_Obsidian, "pickaxe", 3);
 	
 	}
 
@@ -56,7 +79,8 @@ public class ReinforcedArmors {
 
 	//Recipes and Other Stuff
 
-
+	ItemStack Purified_Obsidian_IngotStack = new ItemStack(Purified_Obsidian_Ingot);
+		
 	ItemStack ObsidianStack = new ItemStack(Block.obsidian);
 
 	ItemStack Crying_ObsidianStack = new ItemStack(Crying_Obsidian);
@@ -66,13 +90,34 @@ public class ReinforcedArmors {
 	ItemStack Lapis_BlockStack = new ItemStack(Block.blockLapis);
 
 	ItemStack Ender_PearlStack = new ItemStack(Item.enderPearl);
+	
+	ItemStack Purified_ObsidianStack = new ItemStack(Purified_Obsidian);
 
+	
+	//Crafting Recipe for Crying Obsidian
 
-		GameRegistry.addRecipe(Crying_ObsidianStack, "lyl", "yxy", "lyl", 'x', ObsidianStack, 'y', Lapis_BlockStack, 'l', Ender_PearlStack);
+	GameRegistry.addRecipe(Crying_ObsidianStack, "lyl", "yxy", "lyl", 'x', Purified_ObsidianStack, 'y', Lapis_BlockStack, 'l', Ender_PearlStack);
+	
+	
+	//Crafting Recipe for Purified Obsidian Ingots
+	
+	GameRegistry.addShapelessRecipe(new ItemStack(ReinforcedArmors.Purified_Obsidian_Ingot, 4), new ItemStack(ReinforcedArmors.Purified_Obsidian));
+	
+	//Crafting Recipe for Purified Obsidian Block, Using Purified Obsidian Ingots
+	
+	GameRegistry.addRecipe(Purified_ObsidianStack, "yy", "yy", 'y', Purified_Obsidian_Ingot);
+	
+	//Smelting
+	
+	GameRegistry.addSmelting(Block.obsidian.blockID, new ItemStack(ReinforcedArmors.Purified_Obsidian), 0.5F);
 		
 	//BLOCKS (METHOD)
 	proxy.registerBlocks(); //Calls the registerBlocks method -- This wasn't here before, so don't skip over this!
 		
+	//ITEMS (METHOD)
+	proxy.registerItems(); //Calls the RegisterItems method
+
+	
 	//MULTIPLAYER ABILITY
 //	NetworkRegistry.instance().registerGuiHandler(this, proxy); //Registers the class that deals with GUI data
 
