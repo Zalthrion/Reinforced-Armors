@@ -28,8 +28,8 @@ public class ReinforcedArmorsCommonProxy { //implements IGuiHandler (THIS IS IMP
 	}
 
 	public void registerBlocks(){ //For registering Blocks
-	//Limestone
-	GameRegistry.registerBlock(ReinforcedArmors.Crying_Obsidian, "Crying Obsidian");//Needed for all blocks
+	//Crying Obsidian
+	//GameRegistry.registerBlock(ReinforcedArmors.Crying_Obsidian, "Crying Obsidian");//Needed for all blocks
 	LanguageRegistry.addName(ReinforcedArmors.Crying_Obsidian, "Crying Obsidian");//In-game name
 	}
 

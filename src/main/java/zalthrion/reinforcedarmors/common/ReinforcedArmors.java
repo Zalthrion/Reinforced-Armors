@@ -1,6 +1,8 @@
 package zalthrion.reinforcedarmors.common;
 
 import net.minecraft.block.Block;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -41,8 +43,10 @@ public class ReinforcedArmors {
 	public void PreInit(FMLPreInitializationEvent e){
 
 	//BLOCKS
-	Crying_Obsidian = new BlockCrying_Obsidian(3000).setUnlocalizedName("Crying Obsidian"); //3000 is its ID
-		
+	Crying_Obsidian = new BlockCrying_Obsidian(3000).setHardness(50.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("Crying Obsidian").setCreativeTab(CreativeTabs.tabBlock).setResistance(2000.0F); //3000 is its ID
+	GameRegistry.registerBlock(Crying_Obsidian, "Crying Obsidian");
+	MinecraftForge.setBlockHarvestLevel(Crying_Obsidian, "pickaxe", 3);
+	
 	}
 
 	@EventHandler
