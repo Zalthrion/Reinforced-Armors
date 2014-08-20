@@ -16,6 +16,8 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.common.network.NetworkMod.SidedPacketHandler;
 import cpw.mods.fml.common.SidedProxy;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import zalthrion.reinforcedarmors.common.ReinforcedArmorsCommonProxy;
 import zalthrion.reinforcedarmors.common.blocks.BlockCrying_Obsidian;
 import zalthrion.reinforcedarmors.common.blocks.Purified_Obsidian;
@@ -43,6 +45,14 @@ public class ReinforcedArmors {
 	@SidedProxy(clientSide = "zalthrion.reinforcedarmors.client.ReinforcedArmorsClientProxy", serverSide = "zalthrion.reinforcedarmors.common.ReinforcedArmorsCommonProxy") //Tells Forge the location of your proxies
 	public static ReinforcedArmorsCommonProxy proxy;
 
+	//Creative Tab
+	
+	public static CreativeTabs Reinforced_Armors = new CreativeTabs("Reinforced Armors") {
+	    public ItemStack getIconItemStack() {
+	        return new ItemStack(Crying_Obsidian, 1, 0);
+	    }
+	};
+	
 	//ITEMS
 	public static Item Purified_Obsidian_Ingot;
 	
@@ -64,37 +74,37 @@ public class ReinforcedArmors {
 		
 	//Purified Obsidian Ingot
 		
-	Purified_Obsidian_Ingot = new Purified_Obsidian_Ingot(5113).setUnlocalizedName("Purified Obsidian Ingot").setCreativeTab(CreativeTabs.tabMaterials); //5413 is the ID
+	Purified_Obsidian_Ingot = new Purified_Obsidian_Ingot(5113).setUnlocalizedName("Purified Obsidian Ingot").setCreativeTab(this.Reinforced_Armors); //5413 is the ID
 	GameRegistry.registerItem(Purified_Obsidian_Ingot, "Purified Obsidian Ingot");
 	
 	//Purified Obsidian Ingot
 	
-	Obsidian_Ingot = new Obsidian_Ingot(5114).setUnlocalizedName("Obsidian Ingot").setCreativeTab(CreativeTabs.tabMaterials); //5413 is the ID
+	Obsidian_Ingot = new Obsidian_Ingot(5114).setUnlocalizedName("Obsidian Ingot").setCreativeTab(this.Reinforced_Armors); //5413 is the ID
 	GameRegistry.registerItem(Obsidian_Ingot, "Obsidian Ingot");
 	
 	//BLOCKS
 	
 	//Crying Obsidian
 	
-	Crying_Obsidian = new BlockCrying_Obsidian(3134).setHardness(50.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("Crying Obsidian").setCreativeTab(CreativeTabs.tabBlock).setResistance(2000.0F); //3134 is its ID
+	Crying_Obsidian = new BlockCrying_Obsidian(3134).setHardness(50.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("Crying Obsidian").setCreativeTab(this.Reinforced_Armors).setResistance(2000.0F); //3134 is its ID
 	GameRegistry.registerBlock(Crying_Obsidian, "Crying Obsidian");
 	MinecraftForge.setBlockHarvestLevel(Crying_Obsidian, "pickaxe", 3);
 	
 	//Purified Obsidian
 	
-	Purified_Obsidian = new Purified_Obsidian(3135).setHardness(50.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("Purified Obsidian").setCreativeTab(CreativeTabs.tabBlock).setResistance(2000.0F); //3134 is its ID
+	Purified_Obsidian = new Purified_Obsidian(3135).setHardness(50.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("Purified Obsidian").setCreativeTab(this.Reinforced_Armors).setResistance(2000.0F); //3134 is its ID
 	GameRegistry.registerBlock(Purified_Obsidian, "Purified Obsidian");
 	MinecraftForge.setBlockHarvestLevel(Purified_Obsidian, "pickaxe", 3);
 	
 	//Hardened Obsidian
 	
-	Hardened_Obsidian = new Hardened_Obsidian(3136).setHardness(50.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("Hardened Obsidian").setCreativeTab(CreativeTabs.tabBlock).setResistance(2000.0F); //3134 is its ID
+	Hardened_Obsidian = new Hardened_Obsidian(3136).setHardness(50.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("Hardened Obsidian").setCreativeTab(this.Reinforced_Armors).setResistance(2000.0F); //3134 is its ID
 	GameRegistry.registerBlock(Hardened_Obsidian, "Hardened Obsidian");
 	MinecraftForge.setBlockHarvestLevel(Hardened_Obsidian, "pickaxe", 3);
 	
 	//Hardened Crying Obsidian
 	
-	HardenedCrying_Obsidian = new HardenedCrying_Obsidian(3137).setHardness(50.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("Hardened Crying Obsidian").setCreativeTab(CreativeTabs.tabBlock).setResistance(2000.0F); //3134 is its ID
+	HardenedCrying_Obsidian = new HardenedCrying_Obsidian(3137).setHardness(50.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("Hardened Crying Obsidian").setCreativeTab(this.Reinforced_Armors).setResistance(2000.0F); //3134 is its ID
 	GameRegistry.registerBlock(HardenedCrying_Obsidian, "Hardened Crying Obsidian");
 	MinecraftForge.setBlockHarvestLevel(HardenedCrying_Obsidian, "pickaxe", 3);
 	
@@ -153,6 +163,9 @@ public class ReinforcedArmors {
 	
 	GameRegistry.addSmelting(Crying_Obsidian.blockID, new ItemStack(ReinforcedArmors.HardenedCrying_Obsidian), 0.7F);
 		
+	//CREATIVE TAB (METHOD)
+	LanguageRegistry.instance().addStringLocalization("itemGroup.Reinforced Armors", "en_US", "Reinforced Armors");
+	
 	//BLOCKS (METHOD)
 	proxy.registerBlocks(); //Calls the registerBlocks method -- This wasn't here before, so don't skip over this!
 		
