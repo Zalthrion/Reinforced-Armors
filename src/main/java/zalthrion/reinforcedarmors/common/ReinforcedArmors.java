@@ -19,9 +19,12 @@ import cpw.mods.fml.common.SidedProxy;
 import zalthrion.reinforcedarmors.common.ReinforcedArmorsCommonProxy;
 import zalthrion.reinforcedarmors.common.blocks.BlockCrying_Obsidian;
 import zalthrion.reinforcedarmors.common.blocks.Purified_Obsidian;
+import zalthrion.reinforcedarmors.common.blocks.Hardened_Obsidian;
+import zalthrion.reinforcedarmors.common.blocks.HardenedCrying_Obsidian;
 import zalthrion.reinforcedarmors.common.handlers.ReinforcedArmorsServerPacketHandler;
 import zalthrion.reinforcedarmors.common.handlers.ReinforcedArmorsClientPacketHandler;
 import zalthrion.reinforcedarmors.common.items.Purified_Obsidian_Ingot;
+import zalthrion.reinforcedarmors.common.items.Obsidian_Ingot;
 
 
 @NetworkMod(clientSideRequired=true,serverSideRequired=true, //Whether client side and server side are needed
@@ -43,10 +46,16 @@ public class ReinforcedArmors {
 	//ITEMS
 	public static Item Purified_Obsidian_Ingot;
 	
+	public static Item Obsidian_Ingot;
+	
 	//BLOCKS
 	public static Block Crying_Obsidian;
 	
 	public static Block Purified_Obsidian;
+	
+	public static Block Hardened_Obsidian;
+	
+	public static Block HardenedCrying_Obsidian;
 	
 	@EventHandler
 	public void PreInit(FMLPreInitializationEvent e){
@@ -57,6 +66,11 @@ public class ReinforcedArmors {
 		
 	Purified_Obsidian_Ingot = new Purified_Obsidian_Ingot(5113).setUnlocalizedName("Purified Obsidian Ingot").setCreativeTab(CreativeTabs.tabMaterials); //5413 is the ID
 	GameRegistry.registerItem(Purified_Obsidian_Ingot, "Purified Obsidian Ingot");
+	
+	//Purified Obsidian Ingot
+	
+	Obsidian_Ingot = new Obsidian_Ingot(5114).setUnlocalizedName("Obsidian Ingot").setCreativeTab(CreativeTabs.tabMaterials); //5413 is the ID
+	GameRegistry.registerItem(Obsidian_Ingot, "Obsidian Ingot");
 	
 	//BLOCKS
 	
@@ -72,6 +86,18 @@ public class ReinforcedArmors {
 	GameRegistry.registerBlock(Purified_Obsidian, "Purified Obsidian");
 	MinecraftForge.setBlockHarvestLevel(Purified_Obsidian, "pickaxe", 3);
 	
+	//Hardened Obsidian
+	
+	Hardened_Obsidian = new Hardened_Obsidian(3136).setHardness(50.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("Hardened Obsidian").setCreativeTab(CreativeTabs.tabBlock).setResistance(2000.0F); //3134 is its ID
+	GameRegistry.registerBlock(Hardened_Obsidian, "Hardened Obsidian");
+	MinecraftForge.setBlockHarvestLevel(Hardened_Obsidian, "pickaxe", 3);
+	
+	//Hardened Crying Obsidian
+	
+	HardenedCrying_Obsidian = new HardenedCrying_Obsidian(3137).setHardness(50.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("Hardened Crying Obsidian").setCreativeTab(CreativeTabs.tabBlock).setResistance(2000.0F); //3134 is its ID
+	GameRegistry.registerBlock(HardenedCrying_Obsidian, "Hardened Crying Obsidian");
+	MinecraftForge.setBlockHarvestLevel(HardenedCrying_Obsidian, "pickaxe", 3);
+	
 	}
 
 	@EventHandler
@@ -79,6 +105,8 @@ public class ReinforcedArmors {
 
 	//Recipes and Other Stuff
 
+	ItemStack Obsidian_IngotStack = new ItemStack(Obsidian_Ingot);
+		
 	ItemStack Purified_Obsidian_IngotStack = new ItemStack(Purified_Obsidian_Ingot);
 		
 	ItemStack ObsidianStack = new ItemStack(Block.obsidian);
@@ -92,7 +120,11 @@ public class ReinforcedArmors {
 	ItemStack Ender_PearlStack = new ItemStack(Item.enderPearl);
 	
 	ItemStack Purified_ObsidianStack = new ItemStack(Purified_Obsidian);
+	
+	ItemStack Hardened_ObsidianStack = new ItemStack(Hardened_Obsidian);
 
+	ItemStack HardenedCrying_ObsidianStack = new ItemStack(HardenedCrying_Obsidian);
+	
 	
 	//Crafting Recipe for Crying Obsidian
 
@@ -107,9 +139,19 @@ public class ReinforcedArmors {
 	
 	GameRegistry.addRecipe(Purified_ObsidianStack, "yy", "yy", 'y', Purified_Obsidian_Ingot);
 	
+	//Crafting Recipe for Obsidian Ingots
+	
+	GameRegistry.addShapelessRecipe(new ItemStack(ReinforcedArmors.Obsidian_Ingot, 4), new ItemStack(ReinforcedArmors.Hardened_Obsidian));
+		
+	//Crafting Recipe for Obsidian Block, Using Purified Ingots
+		
+	GameRegistry.addRecipe(ObsidianStack, "yy", "yy", 'y', Obsidian_Ingot);
+	
 	//Smelting
 	
-	GameRegistry.addSmelting(Block.obsidian.blockID, new ItemStack(ReinforcedArmors.Purified_Obsidian), 0.5F);
+	GameRegistry.addSmelting(Block.obsidian.blockID, new ItemStack(ReinforcedArmors.Hardened_Obsidian), 0.5F);
+	
+	GameRegistry.addSmelting(Crying_Obsidian.blockID, new ItemStack(ReinforcedArmors.HardenedCrying_Obsidian), 0.7F);
 		
 	//BLOCKS (METHOD)
 	proxy.registerBlocks(); //Calls the registerBlocks method -- This wasn't here before, so don't skip over this!

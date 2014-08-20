@@ -34,6 +34,13 @@ public class ReinforcedArmorsCommonProxy { //implements IGuiHandler (THIS IS IMP
 	
 	//Purified Obsidian
 	LanguageRegistry.addName(ReinforcedArmors.Purified_Obsidian, "Purified Obsidian");//In-game name
+	
+	//Hardened Obsidian
+	LanguageRegistry.addName(ReinforcedArmors.Hardened_Obsidian, "Hardened Obsidian");//In-game name
+	
+	//Hardened Crying Obsidian
+	LanguageRegistry.addName(ReinforcedArmors.HardenedCrying_Obsidian, "Hardened Crying Obsidian");//In-game name
+	
 	}
 
 	public void registerItems(){ //For registering Items
@@ -41,5 +48,8 @@ public class ReinforcedArmorsCommonProxy { //implements IGuiHandler (THIS IS IMP
 	//Purified Obsidian Ingot
 	LanguageRegistry.addName(ReinforcedArmors.Purified_Obsidian_Ingot, "Purified Obsidian Ingot"); //In-game name
 	
+	//Obsidian Ingot
+	LanguageRegistry.addName(ReinforcedArmors.Obsidian_Ingot, "Obsidian Ingot"); //In-game name
+		
 	}
 }
