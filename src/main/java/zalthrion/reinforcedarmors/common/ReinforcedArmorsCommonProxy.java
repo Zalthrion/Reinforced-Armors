@@ -50,6 +50,26 @@ public class ReinforcedArmorsCommonProxy { //implements IGuiHandler (THIS IS IMP
 	
 	//Obsidian Ingot
 	LanguageRegistry.addName(ReinforcedArmors.Obsidian_Ingot, "Obsidian Ingot"); //In-game name
+	
+	//Obsidian Armor Set
+	
+	
+	//Obsidian Helmet
+	
+	LanguageRegistry.addName(ReinforcedArmors.Obsidian_Helmet, "Obsidian Helmet"); //In-game name
+		
+	//Obsidian Chestplate
+	
+	LanguageRegistry.addName(ReinforcedArmors.Obsidian_Chestplate, "Obsidian Chestplate"); //In-game name
+	
+	
+	//Obsidian Leggings
+	
+	LanguageRegistry.addName(ReinforcedArmors.Obsidian_Leggings, "Obsidian Leggings"); //In-game name
+	
+	//Obsidian Boots
+	
+	LanguageRegistry.addName(ReinforcedArmors.Obsidian_Boots, "Obsidian Boots"); //In-game name
 		
 	}
 }

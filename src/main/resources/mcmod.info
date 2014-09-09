@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
+  "modid": "reinforcedarmors",
+  "name": "Reinforced Armors",
   "description": "Example placeholder mod.",
-  "version": "${version}",
-  "mcversion": "${mcversion}",
+  "version": "0.1.0",
+  "mcversion": "1.6.4",
   "url": "",
   "updateUrl": "",
-  "authors": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authors": ["Zalthrion"],
+  "credits": "Zalthrion",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []

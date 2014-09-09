@@ -2,8 +2,11 @@ package zalthrion.reinforcedarmors.common;
 
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.EnumHelper;
 import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -27,6 +30,7 @@ import zalthrion.reinforcedarmors.common.handlers.ReinforcedArmorsServerPacketHa
 import zalthrion.reinforcedarmors.common.handlers.ReinforcedArmorsClientPacketHandler;
 import zalthrion.reinforcedarmors.common.items.Purified_Obsidian_Ingot;
 import zalthrion.reinforcedarmors.common.items.Obsidian_Ingot;
+import zalthrion.reinforcedarmors.common.items.armors.ItemObsidianArmor;
 
 
 @NetworkMod(clientSideRequired=true,serverSideRequired=true, //Whether client side and server side are needed
@@ -58,6 +62,17 @@ public class ReinforcedArmors {
 	
 	public static Item Obsidian_Ingot;
 	
+	//ARMORS
+	public static Item Obsidian_Helmet;
+	
+	public static Item Obsidian_Chestplate;
+	
+	public static Item Obsidian_Leggings;
+	
+	public static Item Obsidian_Boots;
+	
+	public static EnumArmorMaterial AMObsidian;
+	
 	//BLOCKS
 	public static Block Crying_Obsidian;
 	
@@ -81,6 +96,24 @@ public class ReinforcedArmors {
 	
 	Obsidian_Ingot = new Obsidian_Ingot(5114).setUnlocalizedName("Obsidian Ingot").setCreativeTab(this.Reinforced_Armors); //5413 is the ID
 	GameRegistry.registerItem(Obsidian_Ingot, "Obsidian Ingot");
+	
+	//ARMORS
+	
+	//Obsidian Armor
+	
+	Obsidian_Helmet = new ItemObsidianArmor (5115, AMObsidian, 0, 0, "Obsidian").setUnlocalizedName("Obsidian_Helmet").setCreativeTab(this.Reinforced_Armors);
+	GameRegistry.registerItem(Obsidian_Helmet, "Obsidian Helmet");
+	
+	Obsidian_Chestplate = new ItemObsidianArmor (5116, AMObsidian, 0, 1, "Obsidian").setUnlocalizedName("Obsidian_Chestplate").setCreativeTab(this.Reinforced_Armors);
+	GameRegistry.registerItem(Obsidian_Chestplate, "Obsidian Chestplate");
+	
+	Obsidian_Leggings = new ItemObsidianArmor (5117, AMObsidian, 0, 2, "Obsidian").setUnlocalizedName("Obsidian_Leggings").setCreativeTab(this.Reinforced_Armors);
+	GameRegistry.registerItem(Obsidian_Leggings, "Obsidian Leggings");
+	
+	Obsidian_Boots = new ItemObsidianArmor (5118, AMObsidian, 0, 3, "Obsidian").setUnlocalizedName("Obsidian_Boots").setCreativeTab(this.Reinforced_Armors);
+	GameRegistry.registerItem(Obsidian_Boots, "Obsidian Boots");
+	
+	AMObsidian = EnumHelper.addArmorMaterial("ObsidianArmorMaterial", 25, new int[]{3, 6, 5, 3}, 7);
 	
 	//BLOCKS
 	
