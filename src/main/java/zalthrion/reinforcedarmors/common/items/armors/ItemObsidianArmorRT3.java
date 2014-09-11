@@ -9,6 +9,7 @@ import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumArmorMaterial;
+import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
@@ -16,11 +17,11 @@ import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
 
-public class ItemObsidianArmor extends ItemArmor {
+public class ItemObsidianArmorRT3 extends ItemArmor {
 
 	private String texturePath = "reinforcedarmors" + ":" + "textures/models/armors/";
 	
-	public ItemObsidianArmor(int par1, EnumArmorMaterial armorMaterial, int par3, int par4, String type) {
+	public ItemObsidianArmorRT3(int par1, EnumArmorMaterial armorMaterial, int par3, int par4, String type) {
 		super(par1, armorMaterial, par3, par4);
 		
 		this.setMaxStackSize(1);
@@ -42,8 +43,9 @@ public class ItemObsidianArmor extends ItemArmor {
 	public void onArmorTickUpdate(World world, EntityPlayer player, ItemStack stack)
 
 	{
-
-	player.addPotionEffect(new PotionEffect(Potion.moveSlowdown.id, 2, 0));
+	
+	player.addPotionEffect(new PotionEffect(Potion.resistance.id, 2, 0));
+	player.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 2, 0));
 
 	}
 
@@ -53,16 +55,28 @@ public class ItemObsidianArmor extends ItemArmor {
 
 	public boolean getIsRepairable(ItemStack armor, ItemStack stack) {
 
-	  return stack.getItem() == ReinforcedArmors.Obsidian_Ingot; //Alllows certain items to repair this armor.
+	  return stack.getItem() == ReinforcedArmors.Reinforced_Obsidian_Crystal; //Alllows certain items to repair this armor.
 
+	}
+	
+	@Override
+	public boolean hasEffect(ItemStack par1ItemStack){
+		return true;
+		
 	}
 	
 	public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par2List, boolean par4)
 	{
-	par2List.add("\u00a7d" + "Tier 0");
-	par2List.add("\u00a7o" + "Slowness I");
+	par2List.add("\u00a7d" + "Tier 3");
+	par2List.add("\u00a7o" + "Resistance I");
+	par2List.add("\u00a7o" + "Speed I");
 	}
-
+	
+	@Override
+	@SideOnly(Side.CLIENT)
+	public EnumRarity getRarity(ItemStack par1ItemStack){
+		return EnumRarity.rare;
+	}
 	
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister register){

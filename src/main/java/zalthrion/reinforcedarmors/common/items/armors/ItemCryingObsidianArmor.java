@@ -1,7 +1,5 @@
 package zalthrion.reinforcedarmors.common.items.armors;
 
-import java.util.List;
-
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import zalthrion.reinforcedarmors.common.ReinforcedArmors;
@@ -16,11 +14,11 @@ import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
 
-public class ItemObsidianArmor extends ItemArmor {
+public class ItemCryingObsidianArmor extends ItemArmor {
 
 	private String texturePath = "reinforcedarmors" + ":" + "textures/models/armors/";
 	
-	public ItemObsidianArmor(int par1, EnumArmorMaterial armorMaterial, int par3, int par4, String type) {
+	public ItemCryingObsidianArmor(int par1, EnumArmorMaterial armorMaterial, int par3, int par4, String type) {
 		super(par1, armorMaterial, par3, par4);
 		
 		this.setMaxStackSize(1);
@@ -37,32 +35,25 @@ public class ItemObsidianArmor extends ItemArmor {
   }
 	
 	//(Potion Effects.)
-	@Override
+		@Override
 
-	public void onArmorTickUpdate(World world, EntityPlayer player, ItemStack stack)
+		public void onArmorTickUpdate(World world, EntityPlayer player, ItemStack stack)
 
-	{
+		{
 
-	player.addPotionEffect(new PotionEffect(Potion.moveSlowdown.id, 2, 0));
+		player.addPotionEffect(new PotionEffect(Potion.moveSlowdown.id, 2, 0));
 
-	}
+		}
 
-	//(Repairing)
+		//(Repairing)
 
-	@Override
+		@Override
 
-	public boolean getIsRepairable(ItemStack armor, ItemStack stack) {
+		public boolean getIsRepairable(ItemStack armor, ItemStack stack) {
 
-	  return stack.getItem() == ReinforcedArmors.Obsidian_Ingot; //Alllows certain items to repair this armor.
+		  return stack.getItem() == ReinforcedArmors.Obsidian_Ingot; //Alllows certain items to repair this armor.
 
-	}
-	
-	public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par2List, boolean par4)
-	{
-	par2List.add("\u00a7d" + "Tier 0");
-	par2List.add("\u00a7o" + "Slowness I");
-	}
-
+		}
 	
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister register){

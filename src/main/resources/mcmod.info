@@ -1,8 +1,10 @@
 [
 {
-  "modid": "reinforcedarmors",
+  "modid": "ReinforcedArmors",
   "name": "Reinforced Armors",
-  "description": "Example placeholder mod.",
+  "description": "Weak and Breakable armors? No more! 
+Reinforced Armors adds just what you need! 
+What are you waiting for? Go and Upgrade your Armors!",
   "version": "0.1.0",
   "mcversion": "1.6.4",
   "url": "",

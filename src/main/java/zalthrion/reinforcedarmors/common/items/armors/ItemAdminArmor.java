@@ -12,15 +12,17 @@ import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagList;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
 
-public class ItemObsidianArmor extends ItemArmor {
+public class ItemAdminArmor extends ItemArmor {
 
 	private String texturePath = "reinforcedarmors" + ":" + "textures/models/armors/";
 	
-	public ItemObsidianArmor(int par1, EnumArmorMaterial armorMaterial, int par3, int par4, String type) {
+	public ItemAdminArmor(int par1, EnumArmorMaterial armorMaterial, int par3, int par4, String type) {
 		super(par1, armorMaterial, par3, par4);
 		
 		this.setMaxStackSize(1);
@@ -43,7 +45,11 @@ public class ItemObsidianArmor extends ItemArmor {
 
 	{
 
-	player.addPotionEffect(new PotionEffect(Potion.moveSlowdown.id, 2, 0));
+	player.addPotionEffect(new PotionEffect(Potion.resistance.id, 2, 100));
+	
+	player.addPotionEffect(new PotionEffect(Potion.fireResistance.id, 2, 100));
+	
+	player.addPotionEffect(new PotionEffect(Potion.regeneration.id, 2, 100));
 
 	}
 
@@ -53,16 +59,26 @@ public class ItemObsidianArmor extends ItemArmor {
 
 	public boolean getIsRepairable(ItemStack armor, ItemStack stack) {
 
-	  return stack.getItem() == ReinforcedArmors.Obsidian_Ingot; //Alllows certain items to repair this armor.
+	  return stack.getItem() == ReinforcedArmors.Admin_Crystal; //Allows certain items to repair this armor.
 
+	}
+	
+	@Override
+	public boolean hasEffect(ItemStack par1ItemStack){
+		
+		if(par1ItemStack.stackTagCompound == null) {
+			 par1ItemStack.stackTagCompound = new NBTTagCompound();
+			 }
+			 if(!par1ItemStack.stackTagCompound.hasKey("ench")) {
+		par1ItemStack.setTagInfo("ench", new NBTTagList()); }
+		return true;
+		
 	}
 	
 	public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par2List, boolean par4)
 	{
-	par2List.add("\u00a7d" + "Tier 0");
-	par2List.add("\u00a7o" + "Slowness I");
+	par2List.add("\u00a7o" + "Creative Only");
 	}
-
 	
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister register){

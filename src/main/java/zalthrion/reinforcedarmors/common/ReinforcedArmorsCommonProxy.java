@@ -28,6 +28,7 @@ public class ReinforcedArmorsCommonProxy { //implements IGuiHandler (THIS IS IMP
 	}
 
 	public void registerBlocks(){ //For registering Blocks
+		
 	//Crying Obsidian
 	//GameRegistry.registerBlock(ReinforcedArmors.Crying_Obsidian, "Crying Obsidian");//Needed for all blocks
 	LanguageRegistry.addName(ReinforcedArmors.Crying_Obsidian, "Crying Obsidian");//In-game name
@@ -45,14 +46,31 @@ public class ReinforcedArmorsCommonProxy { //implements IGuiHandler (THIS IS IMP
 
 	public void registerItems(){ //For registering Items
 	
+	//Items
+		
 	//Purified Obsidian Ingot
 	LanguageRegistry.addName(ReinforcedArmors.Purified_Obsidian_Ingot, "Purified Obsidian Ingot"); //In-game name
 	
 	//Obsidian Ingot
 	LanguageRegistry.addName(ReinforcedArmors.Obsidian_Ingot, "Obsidian Ingot"); //In-game name
 	
-	//Obsidian Armor Set
+	//Crying Obsidian Ingot
+	LanguageRegistry.addName(ReinforcedArmors.Crying_Obsidian_Ingot, "Crying Obsidian Ingot"); //In-game name
 	
+	//Obsidian Crystal
+	LanguageRegistry.addName(ReinforcedArmors.Obsidian_Crystal, "Obsidian Crystal");
+	
+	//Reinforced Obsidian Crystal
+	LanguageRegistry.addName(ReinforcedArmors.Reinforced_Obsidian_Crystal, "Reinforced Obsidian Crystal");
+	
+	//Admin Crystal
+	LanguageRegistry.addName(ReinforcedArmors.Admin_Crystal, "Admin Crystal");
+	
+	//Obsidian Crystal
+	LanguageRegistry.addName(ReinforcedArmors.Purified_Obsidian_Crystal, "Purified Obsidian Crystal");
+	
+	
+	//OBSIDIAN Armor Set
 	
 	//Obsidian Helmet
 	
@@ -70,6 +88,164 @@ public class ReinforcedArmorsCommonProxy { //implements IGuiHandler (THIS IS IMP
 	//Obsidian Boots
 	
 	LanguageRegistry.addName(ReinforcedArmors.Obsidian_Boots, "Obsidian Boots"); //In-game name
+	
+	
+	//CRYING OBSIDIAN Armor Set
+	
+	//Obsidian Helmet
+	
+	LanguageRegistry.addName(ReinforcedArmors.CryingObsidian_Helmet, "Crying Obsidian Helmet"); //In-game name
+			
+	//Obsidian Chestplate
+		
+	LanguageRegistry.addName(ReinforcedArmors.CryingObsidian_Chestplate, "Crying Obsidian Chestplate"); //In-game name
+		
+		
+	//Obsidian Leggings
+		
+	LanguageRegistry.addName(ReinforcedArmors.CryingObsidian_Leggings, "Crying Obsidian Leggings"); //In-game name
+		
+	//Obsidian Boots
+		
+	LanguageRegistry.addName(ReinforcedArmors.CryingObsidian_Boots, "Crying Obsidian Boots"); //In-game name
+		
+	
+	//OBSIDIAN T1 Armor Set
+	
+	//Obsidian Helmet
+		
+	LanguageRegistry.addName(ReinforcedArmors.Reinforced_Obsidian_Helmet_T1, "Obsidian Helmet"); //In-game name
+			
+	//Obsidian Chestplate
+		
+	LanguageRegistry.addName(ReinforcedArmors.Reinforced_Obsidian_Chestplate_T1, "Obsidian Chestplate"); //In-game name
+		
+		
+	//Obsidian Leggings
+		
+	LanguageRegistry.addName(ReinforcedArmors.Reinforced_Obsidian_Leggings_T1, "Obsidian Leggings"); //In-game name
+		
+	//Obsidian Boots
+		
+	LanguageRegistry.addName(ReinforcedArmors.Reinforced_Obsidian_Boots_T1, "Obsidian Boots"); //In-game name
+		
+		
+	//CRYING OBSIDIAN T1 Armor Set
+		
+	//Crying Obsidian Helmet
+		
+	LanguageRegistry.addName(ReinforcedArmors.Reinforced_CryingObsidian_Helmet_T1, "Crying Obsidian Helmet"); //In-game name
+				
+	//Crying Obsidian Chestplate
+			
+	LanguageRegistry.addName(ReinforcedArmors.Reinforced_CryingObsidian_Chestplate_T1, "Crying Obsidian Chestplate"); //In-game name
+				
+	//Crying Obsidian Leggings
+			
+	LanguageRegistry.addName(ReinforcedArmors.Reinforced_CryingObsidian_Leggings_T1, "Crying Obsidian Leggings"); //In-game name
+			
+	//Crying Obsidian Boots
+			
+	LanguageRegistry.addName(ReinforcedArmors.Reinforced_CryingObsidian_Boots_T1, "Crying Obsidian Boots"); //In-game name
+	
+	
+	//ADMIN ARMOR
+	
+	//Admin Helmet
+	
+	LanguageRegistry.addName(ReinforcedArmors.Admin_Helmet, "Admin Helmet"); //In-game name
+				
+	//Admin Chestplate
+				
+	LanguageRegistry.addName(ReinforcedArmors.Admin_Chestplate, "Admin Chestplate"); //In-game name
+				
+				
+	//Admin Leggings
+				
+	LanguageRegistry.addName(ReinforcedArmors.Admin_Leggings, "Admin Leggings"); //In-game name
+				
+	//Admin Boots
+				
+	LanguageRegistry.addName(ReinforcedArmors.Admin_Boots, "Admin Boots"); //In-game name
+	
+	
+	//OBSIDIAN ARMOR RT2
+	
+	//Obsidian Helmet RT2
+		
+	LanguageRegistry.addName(ReinforcedArmors.Reinforced_Obsidian_Helmet_T2, "Obsidian Helmet"); //In-game name
+					
+	//Obsidian Chestplate RT2
+					
+	LanguageRegistry.addName(ReinforcedArmors.Reinforced_Obsidian_Chestplate_T2, "Obsidian Chestplate"); //In-game name
+					
+					
+	//Obsidian Leggings RT2
+					
+	LanguageRegistry.addName(ReinforcedArmors.Reinforced_Obsidian_Leggings_T2, "Obsidian Leggings"); //In-game name
+					
+	//Obsidian Boots RT2
+					
+	LanguageRegistry.addName(ReinforcedArmors.Reinforced_Obsidian_Boots_T2, "Obsidian Boots"); //In-game name
+	
+	
+	//OBSIDIAN ARMOR RT3
+	
+	//Obsidian Helmet RT3
+				
+	LanguageRegistry.addName(ReinforcedArmors.Reinforced_Obsidian_Helmet_T3, "Obsidian Helmet"); //In-game name
+							
+	//Obsidian Chestplate RT3
+							
+	LanguageRegistry.addName(ReinforcedArmors.Reinforced_Obsidian_Chestplate_T3, "Obsidian Chestplate"); //In-game name
+											
+	//Obsidian Leggings RT3
+							
+	LanguageRegistry.addName(ReinforcedArmors.Reinforced_Obsidian_Leggings_T3, "Obsidian Leggings"); //In-game name
+							
+	//Obsidian Boots RT3
+							
+	LanguageRegistry.addName(ReinforcedArmors.Reinforced_Obsidian_Boots_T3, "Obsidian Boots"); //In-game name
+	
+	
+	//Crying OBSIDIAN ARMOR RT2
+	
+	//Crying Obsidian Helmet RT2
+			
+	LanguageRegistry.addName(ReinforcedArmors.Reinforced_CryingObsidian_Helmet_T2, "Obsidian Helmet"); //In-game name
+						
+	//Crying Obsidian Chestplate RT2
+						
+	LanguageRegistry.addName(ReinforcedArmors.Reinforced_CryingObsidian_Chestplate_T2, "Obsidian Chestplate"); //In-game name
+						
+						
+	//Crying Obsidian Leggings RT2
+						
+	LanguageRegistry.addName(ReinforcedArmors.Reinforced_CryingObsidian_Leggings_T2, "Obsidian Leggings"); //In-game name
+						
+	//Crying Obsidian Boots RT2
+						
+	LanguageRegistry.addName(ReinforcedArmors.Reinforced_CryingObsidian_Boots_T2, "Obsidian Boots"); //In-game name
+		
+		
+	//Crying OBSIDIAN ARMOR RT3
+		
+	//Crying Obsidian Helmet RT3
+					
+	LanguageRegistry.addName(ReinforcedArmors.Reinforced_CryingObsidian_Helmet_T3, "Obsidian Helmet"); //In-game name
+								
+	//Crying Obsidian Chestplate RT3
+								
+	LanguageRegistry.addName(ReinforcedArmors.Reinforced_CryingObsidian_Chestplate_T3, "Obsidian Chestplate"); //In-game name
+											
+	//Crying Obsidian Leggings RT3
+								
+	LanguageRegistry.addName(ReinforcedArmors.Reinforced_CryingObsidian_Leggings_T3, "Obsidian Leggings"); //In-game name
+								
+	//Crying Obsidian Boots RT3
+								
+	LanguageRegistry.addName(ReinforcedArmors.Reinforced_CryingObsidian_Boots_T3, "Obsidian Boots"); //In-game name
+	
 		
 	}
 }
