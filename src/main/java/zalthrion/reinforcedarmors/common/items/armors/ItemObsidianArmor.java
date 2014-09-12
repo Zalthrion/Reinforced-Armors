@@ -61,6 +61,8 @@ public class ItemObsidianArmor extends ItemArmor {
 	{
 	par2List.add("\u00a7d" + "Tier 0");
 	par2List.add("\u00a7o" + "Slowness I");
+	par2List.add("\u00a7b" + "(Repairable):");
+	par2List.add("\u00a7o" + "Obsidian Ingots");
 	}
 
 	

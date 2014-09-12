@@ -1,5 +1,7 @@
 package zalthrion.reinforcedarmors.common.items.armors;
 
+import java.util.List;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import zalthrion.reinforcedarmors.common.ReinforcedArmors;
@@ -51,10 +53,18 @@ public class ItemCryingObsidianArmor extends ItemArmor {
 
 		public boolean getIsRepairable(ItemStack armor, ItemStack stack) {
 
-		  return stack.getItem() == ReinforcedArmors.Obsidian_Ingot; //Alllows certain items to repair this armor.
+		  return stack.getItem() == ReinforcedArmors.Crying_Obsidian_Ingot; //Alllows certain items to repair this armor.
 
 		}
 	
+		public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par2List, boolean par4)
+		{
+		par2List.add("\u00a7d" + "Tier 0");
+		par2List.add("\u00a7o" + "Slowness I");
+		par2List.add("\u00a7b" + "(Repairable):");
+		par2List.add("\u00a7o" + "Crying Obsidian Ingots");
+		}
+		
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister register){
 		this.itemIcon = register.registerIcon("reinforcedarmors" + ":" + this.getUnlocalizedName().substring(this.getUnlocalizedName().indexOf(".")+1));

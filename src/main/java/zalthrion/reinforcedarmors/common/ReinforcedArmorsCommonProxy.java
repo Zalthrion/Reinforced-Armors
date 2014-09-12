@@ -42,6 +42,9 @@ public class ReinforcedArmorsCommonProxy { //implements IGuiHandler (THIS IS IMP
 	//Hardened Crying Obsidian
 	LanguageRegistry.addName(ReinforcedArmors.HardenedCrying_Obsidian, "Hardened Crying Obsidian");//In-game name
 	
+	//Reinforced Obsidian
+	LanguageRegistry.addName(ReinforcedArmors.Reinforced_Obsidian, "Reinforced Obsidian");//In-game name
+	
 	}
 
 	public void registerItems(){ //For registering Items
@@ -66,8 +69,20 @@ public class ReinforcedArmorsCommonProxy { //implements IGuiHandler (THIS IS IMP
 	//Admin Crystal
 	LanguageRegistry.addName(ReinforcedArmors.Admin_Crystal, "Admin Crystal");
 	
-	//Obsidian Crystal
+	//Crying Obsidian Crystal
 	LanguageRegistry.addName(ReinforcedArmors.Purified_Obsidian_Crystal, "Purified Obsidian Crystal");
+	
+	//Crying Obsidian Crystal
+	LanguageRegistry.addName(ReinforcedArmors.Crying_Obsidian_Crystal, "Crying Obsidian Crystal");
+	
+	//Reinforced Crying Obsidian Crystal
+	LanguageRegistry.addName(ReinforcedArmors.Reinforced_Crying_Obsidian_Crystal, "Reinforced Crying Obsidian Crystal");
+	
+	//Crying Obsidian Crystal
+	LanguageRegistry.addName(ReinforcedArmors.Purified_Crying_Obsidian_Crystal, "Purified Crying Obsidian Crystal");
+	
+	//Reinforced Obsidian Ingot
+	LanguageRegistry.addName(ReinforcedArmors.Reinforced_Obsidian_Ingot, "Reinforced Obsidian Ingot");
 	
 	
 	//OBSIDIAN Armor Set
@@ -212,39 +227,39 @@ public class ReinforcedArmorsCommonProxy { //implements IGuiHandler (THIS IS IMP
 	
 	//Crying Obsidian Helmet RT2
 			
-	LanguageRegistry.addName(ReinforcedArmors.Reinforced_CryingObsidian_Helmet_T2, "Obsidian Helmet"); //In-game name
+	LanguageRegistry.addName(ReinforcedArmors.Reinforced_CryingObsidian_Helmet_T2, "Crying Obsidian Helmet"); //In-game name
 						
 	//Crying Obsidian Chestplate RT2
 						
-	LanguageRegistry.addName(ReinforcedArmors.Reinforced_CryingObsidian_Chestplate_T2, "Obsidian Chestplate"); //In-game name
+	LanguageRegistry.addName(ReinforcedArmors.Reinforced_CryingObsidian_Chestplate_T2, "Crying Obsidian Chestplate"); //In-game name
 						
 						
 	//Crying Obsidian Leggings RT2
 						
-	LanguageRegistry.addName(ReinforcedArmors.Reinforced_CryingObsidian_Leggings_T2, "Obsidian Leggings"); //In-game name
+	LanguageRegistry.addName(ReinforcedArmors.Reinforced_CryingObsidian_Leggings_T2, "Crying Obsidian Leggings"); //In-game name
 						
 	//Crying Obsidian Boots RT2
 						
-	LanguageRegistry.addName(ReinforcedArmors.Reinforced_CryingObsidian_Boots_T2, "Obsidian Boots"); //In-game name
+	LanguageRegistry.addName(ReinforcedArmors.Reinforced_CryingObsidian_Boots_T2, "Crying Obsidian Boots"); //In-game name
 		
 		
 	//Crying OBSIDIAN ARMOR RT3
 		
 	//Crying Obsidian Helmet RT3
 					
-	LanguageRegistry.addName(ReinforcedArmors.Reinforced_CryingObsidian_Helmet_T3, "Obsidian Helmet"); //In-game name
+	LanguageRegistry.addName(ReinforcedArmors.Reinforced_CryingObsidian_Helmet_T3, "Crying Obsidian Helmet"); //In-game name
 								
 	//Crying Obsidian Chestplate RT3
 								
-	LanguageRegistry.addName(ReinforcedArmors.Reinforced_CryingObsidian_Chestplate_T3, "Obsidian Chestplate"); //In-game name
+	LanguageRegistry.addName(ReinforcedArmors.Reinforced_CryingObsidian_Chestplate_T3, "Crying Obsidian Chestplate"); //In-game name
 											
 	//Crying Obsidian Leggings RT3
 								
-	LanguageRegistry.addName(ReinforcedArmors.Reinforced_CryingObsidian_Leggings_T3, "Obsidian Leggings"); //In-game name
+	LanguageRegistry.addName(ReinforcedArmors.Reinforced_CryingObsidian_Leggings_T3, "Crying Obsidian Leggings"); //In-game name
 								
 	//Crying Obsidian Boots RT3
 								
-	LanguageRegistry.addName(ReinforcedArmors.Reinforced_CryingObsidian_Boots_T3, "Obsidian Boots"); //In-game name
+	LanguageRegistry.addName(ReinforcedArmors.Reinforced_CryingObsidian_Boots_T3, "Crying Obsidian Boots"); //In-game name
 	
 		
 	}

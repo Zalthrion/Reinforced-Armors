@@ -1,5 +1,7 @@
 package zalthrion.reinforcedarmors.common.items.armors;
 
+import java.util.List;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import zalthrion.reinforcedarmors.common.ReinforcedArmors;
@@ -42,6 +44,8 @@ public class ItemCryingObsidianArmorRT1 extends ItemArmor {
 	{
 
 	player.addPotionEffect(new PotionEffect(Potion.moveSlowdown.id, 2, 0));
+	
+	player.addPotionEffect(new PotionEffect(Potion.fireResistance.id, 2, 0));
 
 	}
 
@@ -51,8 +55,16 @@ public class ItemCryingObsidianArmorRT1 extends ItemArmor {
 
 	public boolean getIsRepairable(ItemStack armor, ItemStack stack) {
 
-	  return stack.getItem() == ReinforcedArmors.Obsidian_Ingot; //Alllows certain items to repair this armor.
+	  return stack.getItem() == ReinforcedArmors.Obsidian_Ingot; //Allows certain items to repair this armor.
 
+	}
+	
+	public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par2List, boolean par4)
+	{
+	par2List.add("\u00a7d" + "Tier 1");
+	par2List.add("\u00a7o" + "Slowness I");
+	par2List.add("\u00a7b" + "(Repairable):");
+	par2List.add("\u00a7o" + "Crying Obsidian Crystals");
 	}
 	
 	@Override

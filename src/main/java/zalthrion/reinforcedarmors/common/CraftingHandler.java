@@ -44,7 +44,65 @@ public class CraftingHandler implements ICraftingHandler {
 		player.addStat(ReinforcedArmors.Upgraded, 1);
 		}
 		
+		//Tier 2
+		
+		if (item.itemID == ReinforcedArmors.Reinforced_Obsidian_Helmet_T2.itemID)
+		{
+		player.addStat(ReinforcedArmors.Full_Upgrade, 1);
+		}
+		
+		// -=-
+		
+		if (item.itemID == ReinforcedArmors.Reinforced_Obsidian_Chestplate_T2.itemID)
+		{
+		player.addStat(ReinforcedArmors.Full_Upgrade, 1);
+		}
+		
+		// -=-
+		
+		if (item.itemID == ReinforcedArmors.Reinforced_Obsidian_Leggings_T2.itemID)
+		{
+		player.addStat(ReinforcedArmors.Full_Upgrade, 1);
+		}
+		
+		// -=-
+		
+		if (item.itemID == ReinforcedArmors.Reinforced_Obsidian_Boots_T2.itemID)
+		{
+		player.addStat(ReinforcedArmors.Full_Upgrade, 1);
+		}
+		
+		//Tier 3
+		
+		if (item.itemID == ReinforcedArmors.Reinforced_Obsidian_Helmet_T3.itemID)
+		{
+		player.addStat(ReinforcedArmors.Total_Upgrade, 1);
+		}
+		
+		// -=-
+		
+		if (item.itemID == ReinforcedArmors.Reinforced_Obsidian_Chestplate_T3.itemID)
+		{
+		player.addStat(ReinforcedArmors.Total_Upgrade, 1);
+		}
+		
+		// -=-
+		
+		if (item.itemID == ReinforcedArmors.Reinforced_Obsidian_Leggings_T3.itemID)
+		{
+		player.addStat(ReinforcedArmors.Total_Upgrade, 1);
+		}
+		
+		// -=-
+		
+		if (item.itemID == ReinforcedArmors.Reinforced_Obsidian_Boots_T3.itemID)
+		{
+		player.addStat(ReinforcedArmors.Total_Upgrade, 1);
+		}
+		
 		//Crying Obsidian Armor
+		
+		//Tier 1
 		
 		if (item.itemID == ReinforcedArmors.Reinforced_CryingObsidian_Helmet_T1.itemID)
 		{
@@ -74,17 +132,61 @@ public class CraftingHandler implements ICraftingHandler {
 		
 	    //Tier 2
 		
-		if (item.itemID == ReinforcedArmors.Crying_Obsidian_Ingot.itemID)
+		if (item.itemID == ReinforcedArmors.Reinforced_CryingObsidian_Helmet_T2.itemID)
+		{
+		player.addStat(ReinforcedArmors.Full_Upgrade, 1);
+		}
+		
+		// -=-
+		
+		if (item.itemID == ReinforcedArmors.Reinforced_CryingObsidian_Chestplate_T2.itemID)
+		{
+		player.addStat(ReinforcedArmors.Full_Upgrade, 1);
+		}
+		
+		// -=-
+		
+		if (item.itemID == ReinforcedArmors.Reinforced_CryingObsidian_Leggings_T2.itemID)
+		{
+		player.addStat(ReinforcedArmors.Full_Upgrade, 1);
+		}
+		
+		// -=-
+		
+		if (item.itemID == ReinforcedArmors.Reinforced_CryingObsidian_Boots_T2.itemID)
 		{
 		player.addStat(ReinforcedArmors.Full_Upgrade, 1);
 		}
 		
 		//Tier 3
 		
-		if (item.itemID == ReinforcedArmors.Obsidian_Ingot.itemID)
+		if (item.itemID == ReinforcedArmors.Reinforced_CryingObsidian_Helmet_T3.itemID)
 		{
 		player.addStat(ReinforcedArmors.Total_Upgrade, 1);
 		}
+		
+		// -=-
+		
+		if (item.itemID == ReinforcedArmors.Reinforced_CryingObsidian_Chestplate_T3.itemID)
+		{
+		player.addStat(ReinforcedArmors.Total_Upgrade, 1);
+		}
+		
+		// -=-
+		
+		if (item.itemID == ReinforcedArmors.Reinforced_CryingObsidian_Leggings_T3.itemID)
+		{
+		player.addStat(ReinforcedArmors.Total_Upgrade, 1);
+		}
+		
+		// -=-
+		
+		if (item.itemID == ReinforcedArmors.Reinforced_CryingObsidian_Boots_T3.itemID)
+		{
+		player.addStat(ReinforcedArmors.Total_Upgrade, 1);
+		}
+		
+		//-=-
 
 	}
 

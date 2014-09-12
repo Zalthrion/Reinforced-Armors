@@ -38,17 +38,40 @@ public class ItemObsidianArmorRT2 extends ItemArmor {
   }
 	
 	//(Potion Effects.)
-	@Override
 
-	public void onArmorTickUpdate(World world, EntityPlayer player, ItemStack stack)
+		@Override
 
-	{
+		public void onArmorTickUpdate(World world, EntityPlayer player, ItemStack stack)
 
-	player.addPotionEffect(new PotionEffect(Potion.moveSlowdown.id, 2, 0));
-	
-	player.addPotionEffect(new PotionEffect(Potion.resistance.id, 2, 0));
+		{
+		    ItemStack boots = player.getCurrentArmor(0);
+		    ItemStack legs = player.getCurrentArmor(1);
+		    ItemStack chest = player.getCurrentArmor(2);
+		    ItemStack helmet = player.getCurrentArmor(3);    
 
-	}
+		if(this == ReinforcedArmors.Reinforced_Obsidian_Helmet_T2)
+
+		{
+		
+			//if(helmet != null)
+			//if(chest != null)
+			//if(legs != null)
+			//if(boots != null)
+				
+			if(ReinforcedArmors.Reinforced_Obsidian_Helmet_T2 != null)
+			if(ReinforcedArmors.Reinforced_Obsidian_Chestplate_T2 != null)
+			if(ReinforcedArmors.Reinforced_Obsidian_Leggings_T2 != null)
+		    if(ReinforcedArmors.Reinforced_Obsidian_Boots_T2 != null)
+
+		{
+		player.addPotionEffect(new PotionEffect(Potion.resistance.id, 0, 0)); 
+		} 
+		
+		}
+
+		player.addPotionEffect(new PotionEffect(Potion.moveSlowdown.id, 0, 0)); 
+		
+		}
 
 	//(Repairing)
 
@@ -71,6 +94,8 @@ public class ItemObsidianArmorRT2 extends ItemArmor {
 	par2List.add("\u00a7d" + "Tier 2");
 	par2List.add("\u00a7o" + "Resistance I");
 	par2List.add("\u00a7o" + "Slowness I");
+	par2List.add("\u00a7b" + "(Repairable):");
+	par2List.add("\u00a7o" + "Reinforced Obsidian Crystals");
 	}
 	
 	@Override

@@ -30,11 +30,20 @@ import zalthrion.reinforcedarmors.common.blocks.BlockCrying_Obsidian;
 import zalthrion.reinforcedarmors.common.blocks.Purified_Obsidian;
 import zalthrion.reinforcedarmors.common.blocks.Hardened_Obsidian;
 import zalthrion.reinforcedarmors.common.blocks.HardenedCrying_Obsidian;
+import zalthrion.reinforcedarmors.common.blocks.Reinforced_Obsidian;
 import zalthrion.reinforcedarmors.common.handlers.ReinforcedArmorsServerPacketHandler;
 import zalthrion.reinforcedarmors.common.handlers.ReinforcedArmorsClientPacketHandler;
 import zalthrion.reinforcedarmors.common.items.Purified_Obsidian_Ingot;
 import zalthrion.reinforcedarmors.common.items.Obsidian_Ingot;
 import zalthrion.reinforcedarmors.common.items.Crying_Obsidian_Ingot;
+import zalthrion.reinforcedarmors.common.items.Obsidian_Crystal;
+import zalthrion.reinforcedarmors.common.items.Reinforced_Obsidian_Crystal;
+import zalthrion.reinforcedarmors.common.items.Purified_Obsidian_Crystal;
+import zalthrion.reinforcedarmors.common.items.Admin_Crystal;
+import zalthrion.reinforcedarmors.common.items.Crying_Obsidian_Crystal;
+import zalthrion.reinforcedarmors.common.items.Reinforced_Crying_Obsidian_Crystal;
+import zalthrion.reinforcedarmors.common.items.Purified_Crying_Obsidian_Crystal;
+import zalthrion.reinforcedarmors.common.items.Reinforced_Obsidian_Ingot;
 import zalthrion.reinforcedarmors.common.items.armors.ItemAdminArmor;
 import zalthrion.reinforcedarmors.common.items.armors.ItemCryingObsidianArmor;
 import zalthrion.reinforcedarmors.common.items.armors.ItemCryingObsidianArmorRT1;
@@ -44,11 +53,6 @@ import zalthrion.reinforcedarmors.common.items.armors.ItemObsidianArmor;
 import zalthrion.reinforcedarmors.common.items.armors.ItemObsidianArmorRT1;
 import zalthrion.reinforcedarmors.common.items.armors.ItemObsidianArmorRT2;
 import zalthrion.reinforcedarmors.common.items.armors.ItemObsidianArmorRT3;
-import zalthrion.reinforcedarmors.common.items.Obsidian_Crystal;
-import zalthrion.reinforcedarmors.common.items.Reinforced_Obsidian_Crystal;
-import zalthrion.reinforcedarmors.common.items.Purified_Obsidian_Crystal;
-import zalthrion.reinforcedarmors.common.items.Admin_Crystal;
-
 
 
 @NetworkMod(clientSideRequired=true,serverSideRequired=true, //Whether client side and server side are needed
@@ -114,6 +118,14 @@ public static Item Reinforced_Obsidian_Crystal;
 public static Item Admin_Crystal;
 
 public static Item Purified_Obsidian_Crystal;
+
+public static Item Crying_Obsidian_Crystal;
+
+public static Item Reinforced_Crying_Obsidian_Crystal;
+
+public static Item Purified_Crying_Obsidian_Crystal;
+
+public static Item Reinforced_Obsidian_Ingot;
 
 
 //ARMORMATERIALS
@@ -249,6 +261,8 @@ public static Block Hardened_Obsidian;
 
 public static Block HardenedCrying_Obsidian;
 
+public static Block Reinforced_Obsidian;
+
 
 //ACHIEVEMENTS
 
@@ -305,6 +319,25 @@ GameRegistry.registerItem(Admin_Crystal, "Admin Crystal");
 Purified_Obsidian_Crystal= new Purified_Obsidian_Crystal(5143).setUnlocalizedName("Purified Obsidian Crystal").setCreativeTab(this.Reinforced_Armors); //5134 (5434) is the ID
 GameRegistry.registerItem(Purified_Obsidian_Crystal, "Purified Obsidian Crystal");
 
+//Obsidian Crystal
+
+Crying_Obsidian_Crystal= new Crying_Obsidian_Crystal(5156).setUnlocalizedName("Obsidian Crying Crystal").setCreativeTab(this.Reinforced_Armors); //5132 (5432) is the ID
+GameRegistry.registerItem(Crying_Obsidian_Crystal, "Crying Obsidian Crystal");
+
+//Reinforced Obsidian Crystal
+
+Reinforced_Crying_Obsidian_Crystal= new Reinforced_Crying_Obsidian_Crystal(5157).setUnlocalizedName("Reinforced Crying Obsidian Crystal").setCreativeTab(this.Reinforced_Armors); //5132 (5432) is the ID
+GameRegistry.registerItem(Reinforced_Crying_Obsidian_Crystal, "Reinforced Crying Obsidian Crystal");
+
+//Purified Obsidian Crysatl
+
+Purified_Crying_Obsidian_Crystal= new Purified_Crying_Obsidian_Crystal(5158).setUnlocalizedName("Purified Crying Obsidian Crystal").setCreativeTab(this.Reinforced_Armors); //5134 (5434) is the ID
+GameRegistry.registerItem(Purified_Crying_Obsidian_Crystal, "Purified Crying Obsidian Crystal");
+
+Reinforced_Obsidian_Ingot= new Reinforced_Obsidian_Ingot(5159).setUnlocalizedName("Reinforced Obsidian Ingot").setCreativeTab(this.Reinforced_Armors); //5134 (5434) is the ID
+GameRegistry.registerItem(Reinforced_Obsidian_Ingot, "Reinforced Obsidian Ingot");
+
+
 //ARMORS
 
 //ArmorMaterial
@@ -315,7 +348,7 @@ AMObsidianRT1 = EnumHelper.addArmorMaterial("ReinforcedObsidianArmorMaterialT1",
 
 AMObsidianRT2 = EnumHelper.addArmorMaterial("ReinforcedObsidianArmorMaterialT2", 32, new int[]{3, 8, 6, 3}, 11);
 
-AMObsidianRT2 = EnumHelper.addArmorMaterial("ReinforcedObsidianArmorMaterialT2", 36, new int[]{3, 8, 6, 3}, 15);
+AMObsidianRT3 = EnumHelper.addArmorMaterial("ReinforcedObsidianArmorMaterialT3", 36, new int[]{3, 8, 6, 3}, 15);
 
 AMCryingObsidian = EnumHelper.addArmorMaterial("CryingObsidianArmorMaterial", 28, new int[]{3, 7, 5, 3}, 8);
 
@@ -323,7 +356,7 @@ AMCryingObsidianRT1 = EnumHelper.addArmorMaterial("ReinforcedCryingObsidianArmor
 
 AMCryingObsidianRT2 = EnumHelper.addArmorMaterial("ReinforcedCryingObsidianArmorMaterialT2", 34, new int[]{3, 8, 6, 3}, 12);
 
-AMCryingObsidianRT2 = EnumHelper.addArmorMaterial("ReinforcedCryingObsidianArmorMaterialT2", 38, new int[]{3, 8, 6, 3}, 16);
+AMCryingObsidianRT3 = EnumHelper.addArmorMaterial("ReinforcedCryingObsidianArmorMaterialT3", 38, new int[]{3, 8, 6, 3}, 16);
 
 AMAdmin = EnumHelper.addArmorMaterial("AdminArmorMaterial", 100, new int[]{3, 8, 6, 3}, 0);
 
@@ -378,16 +411,16 @@ GameRegistry.registerItem(Reinforced_Obsidian_Boots_T1, "Reinforced Obsidian Boo
 //Reinforced Crying Obsidian Armor T1
 
 
-Reinforced_CryingObsidian_Helmet_T1 = new ItemCryingObsidianArmorRT1 (5128, AMObsidian, 0, 0, "CryingObsidianRT1").setUnlocalizedName("Reinforced_CryingObsidian_Helmet_T1").setCreativeTab(this.Reinforced_Armors);
+Reinforced_CryingObsidian_Helmet_T1 = new ItemCryingObsidianArmorRT1 (5128, AMCryingObsidian, 0, 0, "CryingObsidianRT1").setUnlocalizedName("Reinforced_CryingObsidian_Helmet_T1").setCreativeTab(this.Reinforced_Armors);
 GameRegistry.registerItem(Reinforced_CryingObsidian_Helmet_T1, "Reinforced Crying Obsidian Helmet");
 
-Reinforced_CryingObsidian_Chestplate_T1 = new ItemCryingObsidianArmorRT1 (5129, AMObsidian, 0, 1, "CryingObsidianRT1").setUnlocalizedName("Reinforced_CryingObsidian_Chestplate_T1").setCreativeTab(this.Reinforced_Armors);
+Reinforced_CryingObsidian_Chestplate_T1 = new ItemCryingObsidianArmorRT1 (5129, AMCryingObsidian, 0, 1, "CryingObsidianRT1").setUnlocalizedName("Reinforced_CryingObsidian_Chestplate_T1").setCreativeTab(this.Reinforced_Armors);
 GameRegistry.registerItem(Reinforced_CryingObsidian_Chestplate_T1, "Reinforced Crying Obsidian Chestplate");
 
-Reinforced_CryingObsidian_Leggings_T1 = new ItemCryingObsidianArmorRT1 (5130, AMObsidian, 0, 2, "CryingObsidianRT1").setUnlocalizedName("Reinforced_CryingObsidian_Leggings_T1").setCreativeTab(this.Reinforced_Armors);
+Reinforced_CryingObsidian_Leggings_T1 = new ItemCryingObsidianArmorRT1 (5130, AMCryingObsidian, 0, 2, "CryingObsidianRT1").setUnlocalizedName("Reinforced_CryingObsidian_Leggings_T1").setCreativeTab(this.Reinforced_Armors);
 GameRegistry.registerItem(Reinforced_CryingObsidian_Leggings_T1, "Reinforced Crying Obsidian Leggings");
 
-Reinforced_CryingObsidian_Boots_T1 = new ItemCryingObsidianArmorRT1 (5131, AMObsidian, 0, 3, "CryingObsidianRT1").setUnlocalizedName("Reinforced_CryingObsidian_Boots_T1").setCreativeTab(this.Reinforced_Armors);
+Reinforced_CryingObsidian_Boots_T1 = new ItemCryingObsidianArmorRT1 (5131, AMCryingObsidian, 0, 3, "CryingObsidianRT1").setUnlocalizedName("Reinforced_CryingObsidian_Boots_T1").setCreativeTab(this.Reinforced_Armors);
 GameRegistry.registerItem(Reinforced_CryingObsidian_Boots_T1, "Reinforced Crying Obsidian Boots");
 
 
@@ -438,32 +471,32 @@ GameRegistry.registerItem(Reinforced_Obsidian_Boots_T3, "Reinforced Obsidian Boo
 
 //Reinforced Crying Obsidian Armor T2
 
-Reinforced_CryingObsidian_Helmet_T2 = new ItemCryingObsidianArmorRT2 (5139, AMCryingObsidianRT2, 0, 0, "CryingObsidianRT2").setUnlocalizedName("Reinforced_CryingObsidian_Helmet_T2").setCreativeTab(this.Reinforced_Armors);
+Reinforced_CryingObsidian_Helmet_T2 = new ItemCryingObsidianArmorRT2 (5148, AMCryingObsidianRT2, 0, 0, "CryingObsidianRT2").setUnlocalizedName("Reinforced_CryingObsidian_Helmet_T2").setCreativeTab(this.Reinforced_Armors);
 GameRegistry.registerItem(Reinforced_CryingObsidian_Helmet_T2, "Reinforced Crying Obsidian Helmet Tier 2");
 
-Reinforced_CryingObsidian_Chestplate_T2 = new ItemCryingObsidianArmorRT2 (5140, AMCryingObsidianRT2, 0, 1, "CryingObsidianRT2").setUnlocalizedName("Reinforced_CryingObsidian_Chestplate_T2").setCreativeTab(this.Reinforced_Armors);
+Reinforced_CryingObsidian_Chestplate_T2 = new ItemCryingObsidianArmorRT2 (5149, AMCryingObsidianRT2, 0, 1, "CryingObsidianRT2").setUnlocalizedName("Reinforced_CryingObsidian_Chestplate_T2").setCreativeTab(this.Reinforced_Armors);
 GameRegistry.registerItem(Reinforced_CryingObsidian_Chestplate_T2, "Reinforced Crying Obsidian Chestplate Tier 2");
 
-Reinforced_CryingObsidian_Leggings_T2 = new ItemCryingObsidianArmorRT2 (5141, AMCryingObsidianRT2, 0, 2, "CryingObsidianRT2").setUnlocalizedName("Reinforced_CryingObsidian_Leggings_T2").setCreativeTab(this.Reinforced_Armors);
+Reinforced_CryingObsidian_Leggings_T2 = new ItemCryingObsidianArmorRT2 (5150, AMCryingObsidianRT2, 0, 2, "CryingObsidianRT2").setUnlocalizedName("Reinforced_CryingObsidian_Leggings_T2").setCreativeTab(this.Reinforced_Armors);
 GameRegistry.registerItem(Reinforced_CryingObsidian_Leggings_T2, "Reinforced Crying Obsidian Leggings Tier 2");
 
-Reinforced_CryingObsidian_Boots_T2 = new ItemCryingObsidianArmorRT2 (5142, AMCryingObsidianRT2, 0, 3, "CryingObsidianRT2").setUnlocalizedName("Reinforced_CryingObsidian_Boots_T2").setCreativeTab(this.Reinforced_Armors);
-GameRegistry.registerItem(Reinforced_Obsidian_Boots_T2, "Reinforced Crying Obsidian Boots Tier 2");
+Reinforced_CryingObsidian_Boots_T2 = new ItemCryingObsidianArmorRT2 (5151, AMCryingObsidianRT2, 0, 3, "CryingObsidianRT2").setUnlocalizedName("Reinforced_CryingObsidian_Boots_T2").setCreativeTab(this.Reinforced_Armors);
+GameRegistry.registerItem(Reinforced_CryingObsidian_Boots_T2, "Reinforced Crying Obsidian Boots Tier 2");
 
 
 //Reinforced Crying Obsidian Armor T3
 
-Reinforced_CryingObsidian_Helmet_T3 = new ItemCryingObsidianArmorRT3 (5144, AMCryingObsidianRT3, 0, 0, "CryingObsidianRT3").setUnlocalizedName("Reinforced_CryingObsidian_Helmet_T3").setCreativeTab(this.Reinforced_Armors);
-GameRegistry.registerItem(Reinforced_Obsidian_Helmet_T3, "Reinforced Crying Obsidian Helmet Tier 3");
+Reinforced_CryingObsidian_Helmet_T3 = new ItemCryingObsidianArmorRT3 (5152, AMCryingObsidianRT3, 0, 0, "CryingObsidianRT3").setUnlocalizedName("Reinforced_CryingObsidian_Helmet_T3").setCreativeTab(this.Reinforced_Armors);
+GameRegistry.registerItem(Reinforced_CryingObsidian_Helmet_T3, "Reinforced Crying Obsidian Helmet Tier 3");
 
-Reinforced_CryingObsidian_Chestplate_T3 = new ItemCryingObsidianArmorRT3 (5145, AMCryingObsidianRT3, 0, 1, "CryingObsidianRT3").setUnlocalizedName("Reinforced_CryingObsidian_Chestplate_T3").setCreativeTab(this.Reinforced_Armors);
-GameRegistry.registerItem(Reinforced_Obsidian_Chestplate_T3, "Reinforced Crying Obsidian Chestplate Tier 3");
+Reinforced_CryingObsidian_Chestplate_T3 = new ItemCryingObsidianArmorRT3 (5153, AMCryingObsidianRT3, 0, 1, "CryingObsidianRT3").setUnlocalizedName("Reinforced_CryingObsidian_Chestplate_T3").setCreativeTab(this.Reinforced_Armors);
+GameRegistry.registerItem(Reinforced_CryingObsidian_Chestplate_T3, "Reinforced Crying Obsidian Chestplate Tier 3");
 
-Reinforced_CryingObsidian_Leggings_T3 = new ItemCryingObsidianArmorRT3 (5146, AMCryingObsidianRT3, 0, 2, "CryingObsidianRT3").setUnlocalizedName("Reinforced_CryingObsidian_Leggings_T3").setCreativeTab(this.Reinforced_Armors);
-GameRegistry.registerItem(Reinforced_Obsidian_Leggings_T3, "Reinforced Crying Obsidian Leggings Tier 3");
+Reinforced_CryingObsidian_Leggings_T3 = new ItemCryingObsidianArmorRT3 (5154, AMCryingObsidianRT3, 0, 2, "CryingObsidianRT3").setUnlocalizedName("Reinforced_CryingObsidian_Leggings_T3").setCreativeTab(this.Reinforced_Armors);
+GameRegistry.registerItem(Reinforced_CryingObsidian_Leggings_T3, "Reinforced Crying Obsidian Leggings Tier 3");
 
-Reinforced_CryingObsidian_Boots_T3 = new ItemCryingObsidianArmorRT3 (5147, AMCryingObsidianRT3, 0, 3, "CryingObsidianRT3").setUnlocalizedName("Reinforced_CryingObsidian_Boots_T3").setCreativeTab(this.Reinforced_Armors);
-GameRegistry.registerItem(Reinforced_Obsidian_Boots_T3, "Reinforced Crying Obsidian Boots Tier 3");
+Reinforced_CryingObsidian_Boots_T3 = new ItemCryingObsidianArmorRT3 (5155, AMCryingObsidianRT3, 0, 3, "CryingObsidianRT3").setUnlocalizedName("Reinforced_CryingObsidian_Boots_T3").setCreativeTab(this.Reinforced_Armors);
+GameRegistry.registerItem(Reinforced_CryingObsidian_Boots_T3, "Reinforced Crying Obsidian Boots Tier 3");
 
 
 //BLOCKS
@@ -477,23 +510,31 @@ MinecraftForge.setBlockHarvestLevel(Crying_Obsidian, "pickaxe", 3);
 
 //Purified Obsidian
 
-Purified_Obsidian = new Purified_Obsidian(3135).setHardness(50.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("Purified Obsidian").setCreativeTab(this.Reinforced_Armors).setResistance(2000.0F); //3134 is its ID
+Purified_Obsidian = new Purified_Obsidian(3135).setHardness(50.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("Purified Obsidian").setCreativeTab(this.Reinforced_Armors).setResistance(2000.0F); //3135 is its ID
 GameRegistry.registerBlock(Purified_Obsidian, "Purified Obsidian");
 MinecraftForge.setBlockHarvestLevel(Purified_Obsidian, "pickaxe", 3);
 
 
 //Hardened Obsidian
 
-Hardened_Obsidian = new Hardened_Obsidian(3136).setHardness(50.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("Hardened Obsidian").setCreativeTab(this.Reinforced_Armors).setResistance(2000.0F); //3134 is its ID
+Hardened_Obsidian = new Hardened_Obsidian(3136).setHardness(50.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("Hardened Obsidian").setCreativeTab(this.Reinforced_Armors).setResistance(2000.0F); //3136 is its ID
 GameRegistry.registerBlock(Hardened_Obsidian, "Hardened Obsidian");
 MinecraftForge.setBlockHarvestLevel(Hardened_Obsidian, "pickaxe", 3);
 
 
 //Hardened Crying Obsidian
 
-HardenedCrying_Obsidian = new HardenedCrying_Obsidian(3137).setHardness(50.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("Hardened Crying Obsidian").setCreativeTab(this.Reinforced_Armors).setResistance(2000.0F); //3134 is its ID
+HardenedCrying_Obsidian = new HardenedCrying_Obsidian(3137).setHardness(50.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("Hardened Crying Obsidian").setCreativeTab(this.Reinforced_Armors).setResistance(2000.0F); //3137 is its ID
 GameRegistry.registerBlock(HardenedCrying_Obsidian, "Hardened Crying Obsidian");
 MinecraftForge.setBlockHarvestLevel(HardenedCrying_Obsidian, "pickaxe", 3);
+
+
+//Reinforced Obsidian
+
+Reinforced_Obsidian = new Reinforced_Obsidian(3138).setHardness(50.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("Reinforced Obsidian").setCreativeTab(this.Reinforced_Armors).setResistance(2000.0F); //3138 is its ID
+GameRegistry.registerBlock(Reinforced_Obsidian, "Reinforced Obsidian");
+MinecraftForge.setBlockHarvestLevel(Reinforced_Obsidian, "pickaxe", 3);
+
 
 }
 
@@ -643,6 +684,20 @@ ItemStack Reinforced_Obsidian_Leggings_T3Stack = new ItemStack(Reinforced_Obsidi
 
 ItemStack Reinforced_Obsidian_Boots_T3Stack = new ItemStack(Reinforced_Obsidian_Boots_T3);
 
+ItemStack Crying_Obsidian_CrystalStack = new ItemStack (Crying_Obsidian_Crystal);
+
+ItemStack Reinforced_Crying_Obsidian_CrystalStack = new ItemStack (Reinforced_Crying_Obsidian_Crystal);
+
+ItemStack Purified_Crying_Obsidian_CrystalStack = new ItemStack (Purified_Crying_Obsidian_Crystal);
+
+ItemStack Blaze_PowderStack = new ItemStack (Item.blazePowder);
+
+ItemStack QuartzShardStack = new ItemStack (Item.netherQuartz);
+
+ItemStack Reinforced_ObsidianStack = new ItemStack (Reinforced_Obsidian);
+
+ItemStack Reinforced_ObsidianIngotStack = new ItemStack (Reinforced_Obsidian_Ingot);
+
 
 //Crafting Recipe for Crying Obsidian
 
@@ -701,22 +756,22 @@ GameRegistry.addRecipe(CryingObsidian_BootsStack, "yly", "yly", 'y', Crying_Obsi
 
 //Helmet
 
-GameRegistry.addRecipe(Reinforced_Obsidian_Helmet_T1Stack, "yyy", "yly", 'y', Obsidian_CrystalStack);
+GameRegistry.addRecipe(Reinforced_Obsidian_Helmet_T1Stack, "xyx", "yly", "xyx", 'l', Obsidian_HelmetStack, 'y', Obsidian_CrystalStack);
 
 
 //Chestplate
 
-GameRegistry.addRecipe(Reinforced_Obsidian_Chestplate_T1Stack, "yly", "yyy", "yyy", 'y', Obsidian_CrystalStack);
+GameRegistry.addRecipe(Reinforced_Obsidian_Chestplate_T1Stack, "xyx", "yly", "xyx", 'l', Obsidian_ChestplateStack, 'y', Obsidian_CrystalStack);
 
 
 //Leggings
 
-GameRegistry.addRecipe(Reinforced_Obsidian_Leggings_T1Stack, "yyy", "yly", "yly", 'y', Obsidian_CrystalStack);
+GameRegistry.addRecipe(Reinforced_Obsidian_Leggings_T1Stack, "xyx", "yly", "xyx", 'l', Obsidian_LeggingsStack, 'y', Obsidian_CrystalStack);
 
 
 //Boots
 
-GameRegistry.addRecipe(Reinforced_Obsidian_Boots_T1Stack, "yly", "yly", 'y', Obsidian_CrystalStack);
+GameRegistry.addRecipe(Reinforced_Obsidian_Boots_T1Stack, "xyx", "yly", "xyx", 'l', Obsidian_BootsStack, 'y', Obsidian_CrystalStack);
 
 
 //Crafting Recipe for Reinforced Obsidian Armor T2
@@ -724,22 +779,22 @@ GameRegistry.addRecipe(Reinforced_Obsidian_Boots_T1Stack, "yly", "yly", 'y', Obs
 
 //Helmet
 
-GameRegistry.addRecipe(Reinforced_Obsidian_Helmet_T2Stack, "yyy", "yly", 'y', Reinforced_Obsidian_CrystalStack);
+GameRegistry.addRecipe(Reinforced_Obsidian_Helmet_T2Stack, "yyy", "yly", "yyy", 'l', Reinforced_Obsidian_Helmet_T1Stack, 'y', Reinforced_Obsidian_CrystalStack);
 
 
 //Chestplate
 
-GameRegistry.addRecipe(Reinforced_Obsidian_Chestplate_T2Stack, "yly", "yyy", "yyy", 'y', Reinforced_Obsidian_CrystalStack);
+GameRegistry.addRecipe(Reinforced_Obsidian_Chestplate_T2Stack, "yyy", "yly", "yyy", 'l', Reinforced_Obsidian_Chestplate_T1Stack, 'y', Reinforced_Obsidian_CrystalStack);
 
 
 //Leggings
 
-GameRegistry.addRecipe(Reinforced_Obsidian_Leggings_T2Stack, "yyy", "yly", "yly", 'y', Reinforced_Obsidian_CrystalStack);
+GameRegistry.addRecipe(Reinforced_Obsidian_Leggings_T2Stack, "yyy", "yly", "yyy", 'l', Reinforced_Obsidian_Leggings_T1Stack, 'y', Reinforced_Obsidian_CrystalStack);
 
 
 //Boots
 
-GameRegistry.addRecipe(Reinforced_Obsidian_Boots_T2Stack, "yly", "yly", 'y', Reinforced_Obsidian_CrystalStack);
+GameRegistry.addRecipe(Reinforced_Obsidian_Boots_T2Stack, "yyy", "yly", "yyy", 'l', Reinforced_Obsidian_Boots_T1Stack, 'y', Reinforced_Obsidian_CrystalStack);
 
 
 //Crafting Recipe for Reinforced Obsidian Armor T3
@@ -747,19 +802,19 @@ GameRegistry.addRecipe(Reinforced_Obsidian_Boots_T2Stack, "yly", "yly", 'y', Rei
 
 //Helmet
 
-GameRegistry.addRecipe(Reinforced_Obsidian_Helmet_T3Stack, "yxy", "xlx", "yxy", 'y', Reinforced_Obsidian_Helmet_T2Stack, 'x', FeatherStack, 'y', Purified_Obsidian_CrystalStack);
+GameRegistry.addRecipe(Reinforced_Obsidian_Helmet_T3Stack, "yxy", "xlx", "yxy", 'l', Reinforced_Obsidian_Helmet_T2Stack, 'y', FeatherStack, 'x', Purified_Obsidian_CrystalStack);
 
 //Chestplate
 
-GameRegistry.addRecipe(Reinforced_Obsidian_Chestplate_T3Stack, "yxy", "xlx", "yxy", 'y', Reinforced_Obsidian_Chestplate_T2Stack, 'x', FeatherStack, 'y', Purified_Obsidian_CrystalStack);
+GameRegistry.addRecipe(Reinforced_Obsidian_Chestplate_T3Stack, "yxy", "xlx", "yxy", 'l', Reinforced_Obsidian_Chestplate_T2Stack, 'y', FeatherStack, 'x', Purified_Obsidian_CrystalStack);
 
 //Leggings
 
-GameRegistry.addRecipe(Reinforced_Obsidian_Leggings_T3Stack, "yxy", "xlx", "yxy", 'y', Reinforced_Obsidian_Leggings_T2Stack, 'x', FeatherStack, 'y', Purified_Obsidian_CrystalStack);
+GameRegistry.addRecipe(Reinforced_Obsidian_Leggings_T3Stack, "yxy", "xlx", "yxy", 'l', Reinforced_Obsidian_Leggings_T2Stack, 'y', FeatherStack, 'x', Purified_Obsidian_CrystalStack);
 
 //Boots
 
-GameRegistry.addRecipe(Reinforced_Obsidian_Boots_T3Stack, "yxy", "xlx", "yxy", 'y', Reinforced_Obsidian_Boots_T2Stack, 'x', FeatherStack, 'y', Purified_Obsidian_CrystalStack);
+GameRegistry.addRecipe(Reinforced_Obsidian_Boots_T3Stack, "yxy", "xlx", "yxy", 'l', Reinforced_Obsidian_Boots_T2Stack, 'y', FeatherStack, 'x', Purified_Obsidian_CrystalStack);
 
 
 //Crafting Recipe for Purified Obsidian Ingots
@@ -774,12 +829,12 @@ GameRegistry.addRecipe(Purified_ObsidianStack, "yy", "yy", 'y', Purified_Obsidia
 
 //Crafting Recipe for Obsidian Ingots
 
-GameRegistry.addShapelessRecipe(new ItemStack(ReinforcedArmors.Obsidian_Ingot, 4), new ItemStack(ReinforcedArmors.Hardened_Obsidian));
+GameRegistry.addShapelessRecipe(new ItemStack(ReinforcedArmors.Obsidian_Ingot, 9), new ItemStack(ReinforcedArmors.Hardened_Obsidian));
 
 
-//Crafting Recipe for Obsidian Block, Using Purified Ingots
+//Crafting Recipe for Obsidian Block, Using Obsidian Ingots
 
-GameRegistry.addRecipe(ObsidianStack, "yy", "yy", 'y', Obsidian_Ingot);
+GameRegistry.addRecipe(ObsidianStack, "yyy", "yyy", "yyy",  'y', Obsidian_Ingot);
 
 
 //Crafting Recipe for Crying Obsidian Ingots
@@ -798,11 +853,23 @@ GameRegistry.addRecipe(Obsidian_CrystalStack, "yxy", "xlx", "yxy", 'l', DiamondS
 
 //Crafting Recipe for Purified Obsidian Crystal, Using a Reinforced Obsidian Crystal, Diamonds and Emeralds.
 
-GameRegistry.addRecipe(Purified_Obsidian_CrystalStack, "yxy", "xlx", "yxy", 'y', EmeraldStack, 'x', DiamondStack, 'l', Reinforced_Obsidian_CrystalStack);
+GameRegistry.addRecipe(Purified_Obsidian_CrystalStack, "yxy", "xlx", "yxy", 'y', EmeraldStack, 'x', Purified_Obsidian_IngotStack, 'l', Reinforced_Obsidian_CrystalStack);
 
-//Crafting Recipe for Purified Obsidian Crystal, Using a Reinforced Obsidian Crystal, Diamonds and Emeralds.
+//Crafting Recipe for Reinforced Obsidian Crystal, Using an Obsidian Crystal, Blaze Powder and Obsidian Ingots.
 
-GameRegistry.addRecipe(Purified_Obsidian_CrystalStack, "yxy", "xlx", "yxy", 'y', Ender_PearlStack, 'x', Obsidian_IngotStack, 'l', Obsidian_CrystalStack);
+GameRegistry.addRecipe(Reinforced_Obsidian_CrystalStack, "yxy", "xlx", "yxy", 'y', Blaze_PowderStack, 'x', Obsidian_IngotStack, 'l', Obsidian_CrystalStack);
+
+//Crafting Recipe for Purified Obsidian, Using Nether Quartz shards, Blaze Powder and Hardened Obsidian.
+
+GameRegistry.addRecipe(Purified_ObsidianStack, "yxy", "xlx", "yxy", 'y', QuartzShardStack, 'x', Blaze_PowderStack, 'l', Hardened_ObsidianStack);
+
+//Crafting Recipe for Reinforced Obsidian Block, Using Hardened Obsidian Blocks.
+
+GameRegistry.addRecipe(Reinforced_ObsidianStack, "yxy", "xlx", "yxy",  'y', Hardened_ObsidianStack, 'x', Blaze_PowderStack, 'l', Ender_PearlStack);
+
+//Crafting Recipe for Reinforced Obsidian Ingots
+
+GameRegistry.addShapelessRecipe(new ItemStack(ReinforcedArmors.Reinforced_Obsidian_Ingot, 9), new ItemStack(ReinforcedArmors.Reinforced_Obsidian));
 
 
 //Smelting

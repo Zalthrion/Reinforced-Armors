@@ -68,6 +68,8 @@ public class ItemObsidianArmorRT1 extends ItemArmor {
 	{
 	par2List.add("\u00a7d" + "Tier 1");
 	par2List.add("\u00a7o" + "Slowness I");
+	par2List.add("\u00a7b" + "(Repairable):");
+	par2List.add("\u00a7o" + "Obsidian Crystals");
 	}
 	
 	@Override
