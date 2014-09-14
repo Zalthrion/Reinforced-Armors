@@ -1,6 +1,5 @@
 package zalthrion.reinforcedarmors.common;
 
-
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.EnumArmorMaterial;
@@ -395,32 +394,32 @@ GameRegistry.registerItem(CryingObsidian_Boots, "Crying Obsidian Boots");
 
 //Reinforced Obsidian Armor T1
 
-Reinforced_Obsidian_Helmet_T1 = new ItemObsidianArmorRT1 (5124, AMObsidianRT1, 0, 0, "ObsidianRT1").setUnlocalizedName("Reinforced_Obsidian_Helmet_T1").setCreativeTab(this.Reinforced_Armors);
+Reinforced_Obsidian_Helmet_T1 = new ItemObsidianArmorRT1 (5124, AMObsidianRT1, 0, 0, "Obsidian_RT1").setUnlocalizedName("Reinforced_Obsidian_Helmet_T1").setCreativeTab(this.Reinforced_Armors);
 GameRegistry.registerItem(Reinforced_Obsidian_Helmet_T1, "Reinforced Obsidian Helmet");
 
-Reinforced_Obsidian_Chestplate_T1 = new ItemObsidianArmorRT1 (5125, AMObsidianRT1, 0, 1, "ObsidianRT1").setUnlocalizedName("Reinforced_Obsidian_Chestplate_T1").setCreativeTab(this.Reinforced_Armors);
+Reinforced_Obsidian_Chestplate_T1 = new ItemObsidianArmorRT1 (5125, AMObsidianRT1, 0, 1, "Obsidian_RT1").setUnlocalizedName("Reinforced_Obsidian_Chestplate_T1").setCreativeTab(this.Reinforced_Armors);
 GameRegistry.registerItem(Reinforced_Obsidian_Chestplate_T1, "Reinforced Obsidian Chestplate");
 
-Reinforced_Obsidian_Leggings_T1 = new ItemObsidianArmorRT1 (5126, AMObsidianRT1, 0, 2, "ObsidianRT1").setUnlocalizedName("Reinforced_Obsidian_Leggings_T1").setCreativeTab(this.Reinforced_Armors);
+Reinforced_Obsidian_Leggings_T1 = new ItemObsidianArmorRT1 (5126, AMObsidianRT1, 0, 2, "Obsidian_RT1").setUnlocalizedName("Reinforced_Obsidian_Leggings_T1").setCreativeTab(this.Reinforced_Armors);
 GameRegistry.registerItem(Reinforced_Obsidian_Leggings_T1, "Reinforced Obsidian Leggings");
 
-Reinforced_Obsidian_Boots_T1 = new ItemObsidianArmorRT1 (5127, AMObsidianRT1, 0, 3, "ObsidianRT1").setUnlocalizedName("Reinforced_Obsidian_Boots_T1").setCreativeTab(this.Reinforced_Armors);
+Reinforced_Obsidian_Boots_T1 = new ItemObsidianArmorRT1 (5127, AMObsidianRT1, 0, 3, "Obsidian_RT1").setUnlocalizedName("Reinforced_Obsidian_Boots_T1").setCreativeTab(this.Reinforced_Armors);
 GameRegistry.registerItem(Reinforced_Obsidian_Boots_T1, "Reinforced Obsidian Boots");
 
 
 //Reinforced Crying Obsidian Armor T1
 
 
-Reinforced_CryingObsidian_Helmet_T1 = new ItemCryingObsidianArmorRT1 (5128, AMCryingObsidian, 0, 0, "CryingObsidianRT1").setUnlocalizedName("Reinforced_CryingObsidian_Helmet_T1").setCreativeTab(this.Reinforced_Armors);
+Reinforced_CryingObsidian_Helmet_T1 = new ItemCryingObsidianArmorRT1 (5128, AMCryingObsidianRT1, 0, 0, "CryingObsidian_RT1").setUnlocalizedName("Reinforced_CryingObsidian_Helmet_T1").setCreativeTab(this.Reinforced_Armors);
 GameRegistry.registerItem(Reinforced_CryingObsidian_Helmet_T1, "Reinforced Crying Obsidian Helmet");
 
-Reinforced_CryingObsidian_Chestplate_T1 = new ItemCryingObsidianArmorRT1 (5129, AMCryingObsidian, 0, 1, "CryingObsidianRT1").setUnlocalizedName("Reinforced_CryingObsidian_Chestplate_T1").setCreativeTab(this.Reinforced_Armors);
+Reinforced_CryingObsidian_Chestplate_T1 = new ItemCryingObsidianArmorRT1 (5129, AMCryingObsidianRT1, 0, 1, "CryingObsidian_RT1").setUnlocalizedName("Reinforced_CryingObsidian_Chestplate_T1").setCreativeTab(this.Reinforced_Armors);
 GameRegistry.registerItem(Reinforced_CryingObsidian_Chestplate_T1, "Reinforced Crying Obsidian Chestplate");
 
-Reinforced_CryingObsidian_Leggings_T1 = new ItemCryingObsidianArmorRT1 (5130, AMCryingObsidian, 0, 2, "CryingObsidianRT1").setUnlocalizedName("Reinforced_CryingObsidian_Leggings_T1").setCreativeTab(this.Reinforced_Armors);
+Reinforced_CryingObsidian_Leggings_T1 = new ItemCryingObsidianArmorRT1 (5130, AMCryingObsidianRT1, 0, 2, "CryingObsidian_RT1").setUnlocalizedName("Reinforced_CryingObsidian_Leggings_T1").setCreativeTab(this.Reinforced_Armors);
 GameRegistry.registerItem(Reinforced_CryingObsidian_Leggings_T1, "Reinforced Crying Obsidian Leggings");
 
-Reinforced_CryingObsidian_Boots_T1 = new ItemCryingObsidianArmorRT1 (5131, AMCryingObsidian, 0, 3, "CryingObsidianRT1").setUnlocalizedName("Reinforced_CryingObsidian_Boots_T1").setCreativeTab(this.Reinforced_Armors);
+Reinforced_CryingObsidian_Boots_T1 = new ItemCryingObsidianArmorRT1 (5131, AMCryingObsidianRT1, 0, 3, "CryingObsidian_RT1").setUnlocalizedName("Reinforced_CryingObsidian_Boots_T1").setCreativeTab(this.Reinforced_Armors);
 GameRegistry.registerItem(Reinforced_CryingObsidian_Boots_T1, "Reinforced Crying Obsidian Boots");
 
 
@@ -441,61 +440,61 @@ GameRegistry.registerItem(Admin_Boots, "Admin Boots");
 
 //Reinforced Obsidian Armor T2
 
-Reinforced_Obsidian_Helmet_T2 = new ItemObsidianArmorRT2 (5139, AMObsidianRT2, 0, 0, "ObsidianRT2").setUnlocalizedName("Reinforced_Obsidian_Helmet_T2").setCreativeTab(this.Reinforced_Armors);
+Reinforced_Obsidian_Helmet_T2 = new ItemObsidianArmorRT2 (5139, AMObsidianRT2, 0, 0, "Obsidian_RT2").setUnlocalizedName("Reinforced_Obsidian_Helmet_T2").setCreativeTab(this.Reinforced_Armors);
 GameRegistry.registerItem(Reinforced_Obsidian_Helmet_T2, "Reinforced Obsidian Helmet Tier 2");
 
-Reinforced_Obsidian_Chestplate_T2 = new ItemObsidianArmorRT2 (5140, AMObsidianRT2, 0, 1, "ObsidianRT2").setUnlocalizedName("Reinforced_Obsidian_Chestplate_T2").setCreativeTab(this.Reinforced_Armors);
+Reinforced_Obsidian_Chestplate_T2 = new ItemObsidianArmorRT2 (5140, AMObsidianRT2, 0, 1, "Obsidian_RT2").setUnlocalizedName("Reinforced_Obsidian_Chestplate_T2").setCreativeTab(this.Reinforced_Armors);
 GameRegistry.registerItem(Reinforced_Obsidian_Chestplate_T2, "Reinforced Obsidian Chestplate Tier 2");
 
-Reinforced_Obsidian_Leggings_T2 = new ItemObsidianArmorRT2 (5141, AMObsidianRT2, 0, 2, "ObsidianRT2").setUnlocalizedName("Reinforced_Obsidian_Leggings_T2").setCreativeTab(this.Reinforced_Armors);
+Reinforced_Obsidian_Leggings_T2 = new ItemObsidianArmorRT2 (5141, AMObsidianRT2, 0, 2, "Obsidian_RT2").setUnlocalizedName("Reinforced_Obsidian_Leggings_T2").setCreativeTab(this.Reinforced_Armors);
 GameRegistry.registerItem(Reinforced_Obsidian_Leggings_T2, "Reinforced Obsidian Leggings Tier 2");
 
-Reinforced_Obsidian_Boots_T2 = new ItemObsidianArmorRT2 (5142, AMObsidianRT2, 0, 3, "ObsidianRT2").setUnlocalizedName("Reinforced_Obsidian_Boots_T2").setCreativeTab(this.Reinforced_Armors);
+Reinforced_Obsidian_Boots_T2 = new ItemObsidianArmorRT2 (5142, AMObsidianRT2, 0, 3, "Obsidian_RT2").setUnlocalizedName("Reinforced_Obsidian_Boots_T2").setCreativeTab(this.Reinforced_Armors);
 GameRegistry.registerItem(Reinforced_Obsidian_Boots_T2, "Reinforced Obsidian Boots Tier 2");
 
 
 //Reinforced Obsidian Armor T3
 
-Reinforced_Obsidian_Helmet_T3 = new ItemObsidianArmorRT3 (5144, AMObsidianRT3, 0, 0, "ObsidianRT3").setUnlocalizedName("Reinforced_Obsidian_Helmet_T3").setCreativeTab(this.Reinforced_Armors);
+Reinforced_Obsidian_Helmet_T3 = new ItemObsidianArmorRT3 (5144, AMObsidianRT3, 0, 0, "Obsidian_RT3").setUnlocalizedName("Reinforced_Obsidian_Helmet_T3").setCreativeTab(this.Reinforced_Armors);
 GameRegistry.registerItem(Reinforced_Obsidian_Helmet_T3, "Reinforced Obsidian Helmet Tier 3");
 
-Reinforced_Obsidian_Chestplate_T3 = new ItemObsidianArmorRT3 (5145, AMObsidianRT3, 0, 1, "ObsidianRT3").setUnlocalizedName("Reinforced_Obsidian_Chestplate_T3").setCreativeTab(this.Reinforced_Armors);
+Reinforced_Obsidian_Chestplate_T3 = new ItemObsidianArmorRT3 (5145, AMObsidianRT3, 0, 1, "Obsidian_RT3").setUnlocalizedName("Reinforced_Obsidian_Chestplate_T3").setCreativeTab(this.Reinforced_Armors);
 GameRegistry.registerItem(Reinforced_Obsidian_Chestplate_T3, "Reinforced Obsidian Chestplate Tier 3");
 
-Reinforced_Obsidian_Leggings_T3 = new ItemObsidianArmorRT3 (5146, AMObsidianRT3, 0, 2, "ObsidianRT3").setUnlocalizedName("Reinforced_Obsidian_Leggings_T3").setCreativeTab(this.Reinforced_Armors);
+Reinforced_Obsidian_Leggings_T3 = new ItemObsidianArmorRT3 (5146, AMObsidianRT3, 0, 2, "Obsidian_RT3").setUnlocalizedName("Reinforced_Obsidian_Leggings_T3").setCreativeTab(this.Reinforced_Armors);
 GameRegistry.registerItem(Reinforced_Obsidian_Leggings_T3, "Reinforced Obsidian Leggings Tier 3");
 
-Reinforced_Obsidian_Boots_T3 = new ItemObsidianArmorRT3 (5147, AMObsidianRT3, 0, 3, "ObsidianRT3").setUnlocalizedName("Reinforced_Obsidian_Boots_T3").setCreativeTab(this.Reinforced_Armors);
+Reinforced_Obsidian_Boots_T3 = new ItemObsidianArmorRT3 (5147, AMObsidianRT3, 0, 3, "Obsidian_RT3").setUnlocalizedName("Reinforced_Obsidian_Boots_T3").setCreativeTab(this.Reinforced_Armors);
 GameRegistry.registerItem(Reinforced_Obsidian_Boots_T3, "Reinforced Obsidian Boots Tier 3");
 
 
 //Reinforced Crying Obsidian Armor T2
 
-Reinforced_CryingObsidian_Helmet_T2 = new ItemCryingObsidianArmorRT2 (5148, AMCryingObsidianRT2, 0, 0, "CryingObsidianRT2").setUnlocalizedName("Reinforced_CryingObsidian_Helmet_T2").setCreativeTab(this.Reinforced_Armors);
+Reinforced_CryingObsidian_Helmet_T2 = new ItemCryingObsidianArmorRT2 (5148, AMCryingObsidianRT2, 0, 0, "CryingObsidian_RT2").setUnlocalizedName("Reinforced_CryingObsidian_Helmet_T2").setCreativeTab(this.Reinforced_Armors);
 GameRegistry.registerItem(Reinforced_CryingObsidian_Helmet_T2, "Reinforced Crying Obsidian Helmet Tier 2");
 
-Reinforced_CryingObsidian_Chestplate_T2 = new ItemCryingObsidianArmorRT2 (5149, AMCryingObsidianRT2, 0, 1, "CryingObsidianRT2").setUnlocalizedName("Reinforced_CryingObsidian_Chestplate_T2").setCreativeTab(this.Reinforced_Armors);
+Reinforced_CryingObsidian_Chestplate_T2 = new ItemCryingObsidianArmorRT2 (5149, AMCryingObsidianRT2, 0, 1, "CryingObsidian_RT2").setUnlocalizedName("Reinforced_CryingObsidian_Chestplate_T2").setCreativeTab(this.Reinforced_Armors);
 GameRegistry.registerItem(Reinforced_CryingObsidian_Chestplate_T2, "Reinforced Crying Obsidian Chestplate Tier 2");
 
-Reinforced_CryingObsidian_Leggings_T2 = new ItemCryingObsidianArmorRT2 (5150, AMCryingObsidianRT2, 0, 2, "CryingObsidianRT2").setUnlocalizedName("Reinforced_CryingObsidian_Leggings_T2").setCreativeTab(this.Reinforced_Armors);
+Reinforced_CryingObsidian_Leggings_T2 = new ItemCryingObsidianArmorRT2 (5150, AMCryingObsidianRT2, 0, 2, "CryingObsidian_RT2").setUnlocalizedName("Reinforced_CryingObsidian_Leggings_T2").setCreativeTab(this.Reinforced_Armors);
 GameRegistry.registerItem(Reinforced_CryingObsidian_Leggings_T2, "Reinforced Crying Obsidian Leggings Tier 2");
 
-Reinforced_CryingObsidian_Boots_T2 = new ItemCryingObsidianArmorRT2 (5151, AMCryingObsidianRT2, 0, 3, "CryingObsidianRT2").setUnlocalizedName("Reinforced_CryingObsidian_Boots_T2").setCreativeTab(this.Reinforced_Armors);
+Reinforced_CryingObsidian_Boots_T2 = new ItemCryingObsidianArmorRT2 (5151, AMCryingObsidianRT2, 0, 3, "CryingObsidian_RT2").setUnlocalizedName("Reinforced_CryingObsidian_Boots_T2").setCreativeTab(this.Reinforced_Armors);
 GameRegistry.registerItem(Reinforced_CryingObsidian_Boots_T2, "Reinforced Crying Obsidian Boots Tier 2");
 
 
 //Reinforced Crying Obsidian Armor T3
 
-Reinforced_CryingObsidian_Helmet_T3 = new ItemCryingObsidianArmorRT3 (5152, AMCryingObsidianRT3, 0, 0, "CryingObsidianRT3").setUnlocalizedName("Reinforced_CryingObsidian_Helmet_T3").setCreativeTab(this.Reinforced_Armors);
+Reinforced_CryingObsidian_Helmet_T3 = new ItemCryingObsidianArmorRT3 (5152, AMCryingObsidianRT3, 0, 0, "CryingObsidian_RT3").setUnlocalizedName("Reinforced_CryingObsidian_Helmet_T3").setCreativeTab(this.Reinforced_Armors);
 GameRegistry.registerItem(Reinforced_CryingObsidian_Helmet_T3, "Reinforced Crying Obsidian Helmet Tier 3");
 
-Reinforced_CryingObsidian_Chestplate_T3 = new ItemCryingObsidianArmorRT3 (5153, AMCryingObsidianRT3, 0, 1, "CryingObsidianRT3").setUnlocalizedName("Reinforced_CryingObsidian_Chestplate_T3").setCreativeTab(this.Reinforced_Armors);
+Reinforced_CryingObsidian_Chestplate_T3 = new ItemCryingObsidianArmorRT3 (5153, AMCryingObsidianRT3, 0, 1, "CryingObsidian_RT3").setUnlocalizedName("Reinforced_CryingObsidian_Chestplate_T3").setCreativeTab(this.Reinforced_Armors);
 GameRegistry.registerItem(Reinforced_CryingObsidian_Chestplate_T3, "Reinforced Crying Obsidian Chestplate Tier 3");
 
-Reinforced_CryingObsidian_Leggings_T3 = new ItemCryingObsidianArmorRT3 (5154, AMCryingObsidianRT3, 0, 2, "CryingObsidianRT3").setUnlocalizedName("Reinforced_CryingObsidian_Leggings_T3").setCreativeTab(this.Reinforced_Armors);
+Reinforced_CryingObsidian_Leggings_T3 = new ItemCryingObsidianArmorRT3 (5154, AMCryingObsidianRT3, 0, 2, "CryingObsidian_RT3").setUnlocalizedName("Reinforced_CryingObsidian_Leggings_T3").setCreativeTab(this.Reinforced_Armors);
 GameRegistry.registerItem(Reinforced_CryingObsidian_Leggings_T3, "Reinforced Crying Obsidian Leggings Tier 3");
 
-Reinforced_CryingObsidian_Boots_T3 = new ItemCryingObsidianArmorRT3 (5155, AMCryingObsidianRT3, 0, 3, "CryingObsidianRT3").setUnlocalizedName("Reinforced_CryingObsidian_Boots_T3").setCreativeTab(this.Reinforced_Armors);
+Reinforced_CryingObsidian_Boots_T3 = new ItemCryingObsidianArmorRT3 (5155, AMCryingObsidianRT3, 0, 3, "CryingObsidian_RT3").setUnlocalizedName("Reinforced_CryingObsidian_Boots_T3").setCreativeTab(this.Reinforced_Armors);
 GameRegistry.registerItem(Reinforced_CryingObsidian_Boots_T3, "Reinforced Crying Obsidian Boots Tier 3");
 
 
@@ -697,6 +696,8 @@ ItemStack QuartzShardStack = new ItemStack (Item.netherQuartz);
 ItemStack Reinforced_ObsidianStack = new ItemStack (Reinforced_Obsidian);
 
 ItemStack Reinforced_ObsidianIngotStack = new ItemStack (Reinforced_Obsidian_Ingot);
+
+ItemStack PumpkinStack = new ItemStack (Block.pumpkin);
 
 
 //Crafting Recipe for Crying Obsidian

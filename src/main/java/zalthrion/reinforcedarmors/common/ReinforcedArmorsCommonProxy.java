@@ -45,6 +45,7 @@ public class ReinforcedArmorsCommonProxy { //implements IGuiHandler (THIS IS IMP
 	//Reinforced Obsidian
 	LanguageRegistry.addName(ReinforcedArmors.Reinforced_Obsidian, "Reinforced Obsidian");//In-game name
 	
+	
 	}
 
 	public void registerItems(){ //For registering Items

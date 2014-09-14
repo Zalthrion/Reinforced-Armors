@@ -76,7 +76,7 @@ public class ItemObsidianArmorRT3 extends ItemArmor {
 
 	public boolean getIsRepairable(ItemStack armor, ItemStack stack) {
 
-	  return stack.getItem() == ReinforcedArmors.Reinforced_Obsidian_Crystal; //Alllows certain items to repair this armor.
+	  return stack.getItem() == ReinforcedArmors.Reinforced_Obsidian_Crystal; //Allows certain items to repair this armor.
 
 	}
 	
