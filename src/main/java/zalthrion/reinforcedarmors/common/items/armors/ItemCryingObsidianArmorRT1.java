@@ -5,6 +5,8 @@ import java.util.List;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import zalthrion.reinforcedarmors.common.ReinforcedArmors;
+import zalthrion.reinforcedarmors.common.lib.ModItems;
+import zalthrion.reinforcedarmors.common.lib.ModTabs;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -24,7 +26,7 @@ public class ItemCryingObsidianArmorRT1 extends ItemArmor {
 		super(par1, armorMaterial, par3, par4);
 		
 		this.setMaxStackSize(1);
-		this.setCreativeTab(ReinforcedArmors.Reinforced_Armors);
+		this.setCreativeTab(ModTabs.Reinforced_Armors);
 		this.setTextureName(type, par4);
 	}
 	
@@ -55,16 +57,18 @@ public class ItemCryingObsidianArmorRT1 extends ItemArmor {
 
 	public boolean getIsRepairable(ItemStack armor, ItemStack stack) {
 
-	  return stack.getItem() == ReinforcedArmors.Obsidian_Ingot; //Allows certain items to repair this armor.
+	  return stack.getItem() == ModItems.CryingObsidian_Crystal; //Allows certain items to repair this armor.
 
 	}
 	
 	public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par2List, boolean par4)
 	{
 	par2List.add("\u00a7d" + "Tier 1");
-	par2List.add("\u00a7o" + "Slowness I");
+//	par2List.add("\u00a7o" + "Slowness I");
+	par2List.add("Slowness I");
 	par2List.add("\u00a7b" + "(Repairable):");
-	par2List.add("\u00a7o" + "Crying Obsidian Crystals");
+//	par2List.add("\u00a7o" + "Crying Obsidian Crystals");
+	par2List.add("Crying Obsidian Crystals");
 	}
 	
 	@Override

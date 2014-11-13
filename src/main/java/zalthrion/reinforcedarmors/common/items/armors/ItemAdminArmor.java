@@ -5,6 +5,9 @@ import java.util.List;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import zalthrion.reinforcedarmors.common.ReinforcedArmors;
+import zalthrion.reinforcedarmors.common.lib.ModArmor;
+import zalthrion.reinforcedarmors.common.lib.ModItems;
+import zalthrion.reinforcedarmors.common.lib.ModTabs;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -26,7 +29,7 @@ public class ItemAdminArmor extends ItemArmor {
 		super(par1, armorMaterial, par3, par4);
 		
 		this.setMaxStackSize(1);
-		this.setCreativeTab(ReinforcedArmors.Reinforced_Armors);
+		this.setCreativeTab(ModTabs.Reinforced_Armors);
 		this.setTextureName(type, par4);
 	}
 	
@@ -44,6 +47,25 @@ public class ItemAdminArmor extends ItemArmor {
 	public void onArmorTickUpdate(World world, EntityPlayer player, ItemStack stack)
 
 	{
+		ItemStack boots = player.getCurrentArmor(0);
+		ItemStack legs = player.getCurrentArmor(1);
+		ItemStack chest = player.getCurrentArmor(2);
+		ItemStack helmet = player.getCurrentArmor(3);    
+
+				if(this == ModArmor.Admin_Helmet)
+
+				{
+					//if(helmet != null)
+					//if(chest != null)
+					//if(legs != null)
+					//if(boots != null)
+						
+					if(ModArmor.Admin_Helmet != null)
+					if(ModArmor.Admin_Chestplate != null)
+					if(ModArmor.Admin_Leggings != null)
+				    if(ModArmor.Admin_Boots != null)
+
+				{
 
 	player.addPotionEffect(new PotionEffect(Potion.resistance.id, 2, 100));
 	
@@ -51,6 +73,8 @@ public class ItemAdminArmor extends ItemArmor {
 	
 	player.addPotionEffect(new PotionEffect(Potion.regeneration.id, 2, 100));
 
+				}
+				}
 	}
 
 	//(Repairing)
@@ -59,7 +83,7 @@ public class ItemAdminArmor extends ItemArmor {
 
 	public boolean getIsRepairable(ItemStack armor, ItemStack stack) {
 
-	  return stack.getItem() == ReinforcedArmors.Admin_Crystal; //Allows certain items to repair this armor.
+	  return stack.getItem() == ModItems.Admin_Crystal; //Allows certain items to repair this armor.
 
 	}
 	

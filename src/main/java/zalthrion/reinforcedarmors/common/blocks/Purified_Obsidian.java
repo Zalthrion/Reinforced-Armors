@@ -16,6 +16,6 @@ public class Purified_Obsidian extends Block
     }
     public void registerIcons(IconRegister iconRegister)
     {
-             blockIcon = iconRegister.registerIcon("reinforcedarmors:Purified_Obsidian");//Telling Forge where our texture is
+             blockIcon = iconRegister.registerIcon("reinforcedarmors:Obsidian_3");//Telling Forge where our texture is
     }
 }

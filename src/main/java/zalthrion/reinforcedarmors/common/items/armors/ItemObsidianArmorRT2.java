@@ -5,6 +5,8 @@ import java.util.List;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import zalthrion.reinforcedarmors.common.ReinforcedArmors;
+import zalthrion.reinforcedarmors.common.lib.ModItems;
+import zalthrion.reinforcedarmors.common.lib.ModTabs;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -25,7 +27,7 @@ public class ItemObsidianArmorRT2 extends ItemArmor {
 		super(par1, armorMaterial, par3, par4);
 		
 		this.setMaxStackSize(1);
-		this.setCreativeTab(ReinforcedArmors.Reinforced_Armors);
+		this.setCreativeTab(ModTabs.Reinforced_Armors);
 		this.setTextureName(type, par4);
 	}
 	
@@ -44,30 +46,30 @@ public class ItemObsidianArmorRT2 extends ItemArmor {
 		public void onArmorTickUpdate(World world, EntityPlayer player, ItemStack stack)
 
 		{
-		    ItemStack boots = player.getCurrentArmor(0);
-		    ItemStack legs = player.getCurrentArmor(1);
-		    ItemStack chest = player.getCurrentArmor(2);
-		    ItemStack helmet = player.getCurrentArmor(3);    
+//		    ItemStack boots = player.getCurrentArmor(0);
+	//	    ItemStack legs = player.getCurrentArmor(1);
+//	    ItemStack chest = player.getCurrentArmor(2);
+	//	    ItemStack helmet = player.getCurrentArmor(3);    
 
-		if(this == ReinforcedArmors.Reinforced_Obsidian_Helmet_T2)
+//		if(this == ReinforcedArmors.Reinforced_Obsidian_Helmet_T2)
 
-		{
+//		{
 		
 			//if(helmet != null)
 			//if(chest != null)
 			//if(legs != null)
 			//if(boots != null)
 				
-			if(ReinforcedArmors.Reinforced_Obsidian_Helmet_T2 != null)
-			if(ReinforcedArmors.Reinforced_Obsidian_Chestplate_T2 != null)
-			if(ReinforcedArmors.Reinforced_Obsidian_Leggings_T2 != null)
-		    if(ReinforcedArmors.Reinforced_Obsidian_Boots_T2 != null)
+//			if(ReinforcedArmors.Reinforced_Obsidian_Helmet_T2 != null)
+//			if(ReinforcedArmors.Reinforced_Obsidian_Chestplate_T2 != null)
+//			if(ReinforcedArmors.Reinforced_Obsidian_Leggings_T2 != null)
+//		    if(ReinforcedArmors.Reinforced_Obsidian_Boots_T2 != null)
 
-		{
-		player.addPotionEffect(new PotionEffect(Potion.resistance.id, 0, 0)); 
-		} 
+	//	{
+//		player.addPotionEffect(new PotionEffect(Potion.resistance.id, 0, 0)); //Potion Effect when wearing the whole armor set.
+	//	} 
 		
-		}
+//		}
 
 		player.addPotionEffect(new PotionEffect(Potion.moveSlowdown.id, 0, 0)); 
 		
@@ -79,7 +81,7 @@ public class ItemObsidianArmorRT2 extends ItemArmor {
 
 	public boolean getIsRepairable(ItemStack armor, ItemStack stack) {
 
-	  return stack.getItem() == ReinforcedArmors.Reinforced_Obsidian_Crystal; //Allows certain items to repair this armor.
+	  return stack.getItem() == ModItems.Reinforced_Obsidian_Crystal; //Allows certain items to repair this armor.
 
 	}
 	
@@ -92,10 +94,13 @@ public class ItemObsidianArmorRT2 extends ItemArmor {
 	public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par2List, boolean par4)
 	{
 	par2List.add("\u00a7d" + "Tier 2");
-	par2List.add("\u00a7o" + "Resistance I");
-	par2List.add("\u00a7o" + "Slowness I");
+//	par2List.add("\u00a7o" + "Resistance I");
+//	par2List.add("\u00a7o" + "Slowness I");
+	par2List.add("Resistance I");
+	par2List.add("Slowness I");
 	par2List.add("\u00a7b" + "(Repairable):");
-	par2List.add("\u00a7o" + "Reinforced Obsidian Crystals");
+//	par2List.add("\u00a7o" + "Reinforced Obsidian Crystals");
+	par2List.add("Reinforced Obsidian Crystals");
 	}
 	
 	@Override

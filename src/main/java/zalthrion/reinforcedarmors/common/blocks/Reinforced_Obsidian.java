@@ -18,6 +18,6 @@ public class Reinforced_Obsidian extends Block
     }
     public void registerIcons(IconRegister iconRegister)
     {
-             blockIcon = iconRegister.registerIcon("reinforcedarmors:Reinforced_Obsidian");//Telling Forge where our texture is
+             blockIcon = iconRegister.registerIcon("reinforcedarmors:Obsidian_1");//Telling Forge where our texture is
     }
 }

@@ -20,6 +20,11 @@ super(id);
 }
 
 @Override
+public boolean hasEffect(ItemStack par1ItemStack){
+	return true;
+}
+
+@Override
 @SideOnly(Side.CLIENT)
 public void registerIcons(IconRegister iconRegister)
 {
